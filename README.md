@@ -46,7 +46,3 @@ The project's setup involves configuration files such as `dbt_project.yml`, whic
 ## Conclusion
 
 This project represents a comprehensive approach to e-commerce data analysis, with a focus on scalability, maintainability, and the delivery of valuable business insights. It serves as a testament to the capabilities of dbt and modern data practices in the field of analytics.
-
----
-
-Remember to tailor the `README.md` to include any additional details specific to the Billy Bulky project, such as instructions for setting up the project, how to run the dbt models, and how to view the documentation.
