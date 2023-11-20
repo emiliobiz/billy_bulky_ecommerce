@@ -21,7 +21,6 @@ models:
         tests:
           - not_null
           - unique
-          - email
 
       - name: join_date
         description: "The date when the customer joined."

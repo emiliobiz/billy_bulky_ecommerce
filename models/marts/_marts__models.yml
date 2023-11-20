@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: sales_fact
-    description: "The sales_fact table is the central fact table in the star schema for the sales data mart. It contains key metrics for each sale, linked to the customer and product dimensions, and is optimized for analysis and reporting."
+  - name: marts_sales
+    description: "The sales table is the central fact table in the star schema for the sales data mart. It contains key metrics for each sale, linked to the customer and product dimensions, and is optimized for analysis and reporting."
 
     columns:
       - name: order_id
@@ -16,7 +16,7 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_customers')
+              to: ref('customers')
               field: customer_id
 
       - name: product_id
@@ -24,7 +24,7 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_products')
+              to: ref('products')
               field: product_id
 
       - name: quantity
@@ -59,5 +59,68 @@ models:
 
       - name: country
         description: "The country where the customer is located."
+        tests:
+          - not_null
+
+  - name: marts_customers
+    description: "The customers table is a dimensional model in the marts layer that provides a 360-degree view of customers, including total orders and total spend, useful for analytics and reporting purposes."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "The customer's first name."
+      - name: last_name
+        description: "The customer's last name."
+      - name: email
+        description: "The customer's email address."
+        tests:
+          - unique
+          - not_null
+      - name: join_date
+        description: "The date when the customer joined."
+        tests:
+          - not_null
+      - name: country
+        description: "The country of the customer's residence."
+      - name: total_orders
+        description: "The total number of orders placed by the customer."
+        tests:
+          - not_null
+      - name: total_spent
+        description: "The total amount of money spent by the customer."
+        tests:
+          - not_null
+      - name: customer_segment
+        description: "A segment categorization based on the customer's spending behavior."
+
+  - name: marts_products
+    description: "The products table is a dimensional model in the marts layer that captures product dimensions along with aggregated sales metrics like total units sold and total sales value, useful for product performance analysis."
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Name of the product."
+        tests:
+          - not_null
+      - name: category
+        description: "Category to which the product belongs."
+        tests:
+          - not_null
+      - name: price
+        description: "List price of the product."
+        tests:
+          - not_null
+      - name: total_units_sold
+        description: "The total number of units of the product sold."
+        tests:
+          - not_null
+      - name: total_sales_value
+        description: "The total revenue generated from the product sales."
         tests:
           - not_null
