@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_customer_segmentation
+    description: >
+      This intermediate table enhances the customer dataset with additional metrics
+      useful for segmentation such as Recency, Frequency, Monetary value, Average Order Value,
+      and other calculated fields necessary for identifying customer segments.
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        tests:
+          - not_null

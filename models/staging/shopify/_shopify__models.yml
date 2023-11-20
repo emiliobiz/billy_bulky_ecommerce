@@ -1,0 +1,10 @@
+version: 2
+
+sources: 
+  - name: shopify 
+    database: SHOPIFY
+    schema: PUBLIC 
+    tables: 
+      - name: orders
+      - name: customers
+      - name: products 

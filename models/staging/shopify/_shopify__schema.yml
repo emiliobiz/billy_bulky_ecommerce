@@ -1,0 +1,108 @@
+version: 2
+
+models:
+  - name: customers
+    description: "This model transforms the raw Shopify customers data to include only the necessary fields for further analysis."
+    columns:
+      - name: customer_id
+        description: "The unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: "The first name of the customer."
+
+      - name: last_name
+        description: "The last name of the customer."
+
+      - name: email
+        description: "The email address of the customer."
+        tests:
+          - not_null
+          - unique
+          - email
+
+      - name: join_date
+        description: "The date when the customer joined."
+        tests:
+          - not_null
+
+      - name: country
+        description: "The country where the customer is located."
+
+  - name: orders
+    description: "This model transforms the raw Shopify orders data to include core fields for order tracking and status."
+    columns:
+      - name: order_id
+        description: "The unique identifier for the order."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "The identifier for the customer associated with the order."
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "The identifier for the product associated with the order."
+        tests:
+          - not_null
+
+      - name: quantity
+        description: "The quantity of the product ordered."
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "The date when the order was placed."
+        tests:
+          - not_null
+
+      - name: status
+        description: "The current status of the order."
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - cancelled
+                - processing
+                - delivered
+                - shipped
+
+  - name: products
+    description: "A table of products sourced from Shopify, including product details and stock levels."
+    columns:
+      - name: product_id
+        description: "The unique identifier for each product."
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: "The name of the product."
+        tests:
+          - not_null
+
+      - name: category
+        description: "The category to which the product belongs."
+        tests: 
+          - accepted_values:
+                values: 
+                  - books
+                  - electronics
+                  - home
+                  - toys
+                  - garden
+                  - clothing
+
+      - name: price
+        description: "The price of the product."
+        tests:
+          - not_null
+
+      - name: stock_level
+        description: "The current stock level for the product."
+        tests:
+          - not_null
