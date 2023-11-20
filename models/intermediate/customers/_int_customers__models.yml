@@ -2,12 +2,56 @@ version: 2
 
 models:
   - name: int_customer_segmentation
-    description: >
-      This intermediate table enhances the customer dataset with additional metrics
-      useful for segmentation such as Recency, Frequency, Monetary value, Average Order Value,
-      and other calculated fields necessary for identifying customer segments.
+    description: "This intermediate table enhances the customer dataset with additional metrics useful for segmentation such as Recency, Frequency, Monetary value, Average Order Value, and Order Cancellation Rate, along with other calculated fields necessary for identifying customer segments."
     columns:
       - name: customer_id
-        description: Unique identifier for the customer.
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "The customer's first name."
+      - name: last_name
+        description: "The customer's last name."
+      - name: email
+        description: "The customer's email address."
         tests:
           - not_null
+          - unique
+      - name: join_date
+        description: "The date when the customer created an account or joined."
+      - name: country
+        description: "The country of the customer's residence."
+      - name: frequency
+        description: "The total number of completed orders by the customer."
+        tests:
+          - not_null
+      - name: monetary
+        description: "The total monetary value of all completed orders by the customer."
+        tests:
+          - not_null
+      - name: average_order_value
+        description: "The average monetary value of the customer's orders."
+        tests:
+          - not_null
+      - name: cancelled_orders
+        description: "The total number of orders cancelled by the customer."
+      - name: total_orders
+        description: "The total number of orders placed by the customer, including cancelled orders."
+      - name: cancellation_rate
+        description: "The percentage of the customer's orders that were cancelled."
+        tests:
+          - not_null
+      - name: recency
+        description: "The number of days since the customer's last order."
+        tests:
+          - not_null
+      - name: tenure
+        description: "The number of days since the customer's account was created."
+        tests:
+          - not_null
+    
+    tests:
+      - relationships:
+          to: ref('staging_shopify__customers')
+          field: customer_id

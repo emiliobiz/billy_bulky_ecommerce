@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_product_performance
+    description: "This model aggregates product performance metrics from order and product data, providing insights into sales volume, revenue, average pricing, and stock turnover rates."
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: "Name of the product."
+        tests:
+          - not_null
+
+      - name: category
+        description: "Category to which the product belongs."
+        tests:
+          - not_null
+
+      - name: price
+        description: "Listed price of the product."
+        tests:
+          - not_null
+
+      - name: average_sale_price
+        description: "The average sale price at which the product is sold, considering discounts and promotions."
+        tests:
+          - not_null
+
+      - name: total_sales
+        description: "The total number of sales (orders) for the product."
+        tests:
+          - not_null
+
+      - name: total_units_sold
+        description: "The total number of units of the product sold."
+        tests:
+          - not_null
+
+      - name: total_sales_value
+        description: "The total revenue generated from the product sales."
+        tests:
+          - not_null
+
+      - name: turnover_rate
+        description: "The rate at which the product's stock is sold and replaced, calculated as total units sold divided by the stock level."
+        tests:
+          - not_null
+
+      - name: stock_level
+        description: "The current stock level of the product."
+        tests:
+          - not_null
+

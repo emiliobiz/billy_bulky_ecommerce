@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: int_sales_trends
+    description: "This model captures the sales trends over different time periods, including daily, weekly, monthly, and yearly aggregates. It helps in understanding the temporal dynamics of sales such as seasonality, growth rates, and period comparisons."
+
+    columns:
+      - name: sale_date
+        description: "The date on which sales were made."
+        tests:
+          - not_null
+          - unique
+
+      - name: daily_orders
+        description: "The total number of orders placed on a particular day."
+        tests:
+          - not_null
+
+      - name: daily_units_sold
+        description: "The total number of units sold on a particular day."
+        tests:
+          - not_null
+
+      - name: daily_sales_value
+        description: "The total sales value on a particular day."
+        tests:
+          - not_null
+
+      - name: weekly_orders
+        description: "The total number of orders placed during a particular week."
+        tests:
+          - not_null
+
+      - name: weekly_units_sold
+        description: "The total number of units sold during a particular week."
+        tests:
+          - not_null
+
+      - name: weekly_sales_value
+        description: "The total sales value during a particular week."
+        tests:
+          - not_null
+
+      - name: monthly_orders
+        description: "The total number of orders placed during a particular month."
+        tests:
+          - not_null
+
+      - name: monthly_units_sold
+        description: "The total number of units sold during a particular month."
+        tests:
+          - not_null
+
+      - name: monthly_sales_value
+        description: "The total sales value during a particular month."
+        tests:
+          - not_null
+
+      - name: yearly_orders
+        description: "The total number of orders placed during a particular year."
+        tests:
+          - not_null
+
+      - name: yearly_units_sold
+        description: "The total number of units sold during a particular year."
+        tests:
+          - not_null
+
+      - name: yearly_sales_value
+        description: "The total sales value during a particular year."
+        tests:
+          - not_null

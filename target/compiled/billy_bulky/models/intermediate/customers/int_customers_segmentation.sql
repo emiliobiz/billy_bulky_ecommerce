@@ -1,13 +1,51 @@
+WITH  __dbt__cte__staging_shopify__customers as (
 WITH customers AS (
-    SELECT * FROM E_COMMERCE.staging.staging_shopify__customers
+    SELECT * FROM SHOPIFY.PUBLIC.customers
+)
+
+SELECT
+    CUSTOMER_ID
+    , FIRST_NAME
+    , LAST_NAME
+    , EMAIL
+    , JOIN_DATE
+    , COUNTRY
+FROM customers
+),  __dbt__cte__staging_shopify__orders as (
+WITH orders AS (
+    SELECT * FROM SHOPIFY.PUBLIC.orders
+)
+
+SELECT
+    ORDER_ID
+    , CUSTOMER_ID
+    , PRODUCT_ID
+    , QUANTITY
+    , ORDER_DATE
+    , STATUS
+FROM orders
+),  __dbt__cte__staging_shopify__products as (
+WITH products AS (
+    SELECT * FROM SHOPIFY.PUBLIC.products
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+FROM products
+), customers AS (
+    SELECT * FROM __dbt__cte__staging_shopify__customers
 )
 
 , orders AS (
-    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+    SELECT * FROM __dbt__cte__staging_shopify__orders
 )
 
 , products AS (
-    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+    SELECT * FROM __dbt__cte__staging_shopify__products
 )
 
 , order_aggregates AS (

@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: sales_fact
+    description: "The sales_fact table is the central fact table in the star schema for the sales data mart. It contains key metrics for each sale, linked to the customer and product dimensions, and is optimized for analysis and reporting."
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for the sales order."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Foreign key to the customer dimension table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
+      - name: product_id
+        description: "Foreign key to the product dimension table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+
+      - name: quantity
+        description: "The number of units sold in the order."
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "The date when the order was placed."
+        tests:
+          - not_null
+
+      - name: status
+        description: "The status of the order, indicating if it has been completed, shipped, etc."
+        tests:
+          - not_null
+
+      - name: category
+        description: "The category of the product sold."
+        tests:
+          - not_null
+
+      - name: unit_price
+        description: "The price of one unit of the product."
+        tests:
+          - not_null
+
+      - name: total_price
+        description: "The total price for the quantity of products sold in the order."
+        tests:
+          - not_null
+
+      - name: country
+        description: "The country where the customer is located."
+        tests:
+          - not_null
