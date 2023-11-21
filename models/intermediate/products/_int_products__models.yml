@@ -55,4 +55,28 @@ models:
         description: "The current stock level of the product."
         tests:
           - not_null
+  
+  - name: int_products_inventory
+    description: "A daily snapshot of inventory levels for each product."
+    columns:
+      - name: snapshot_date
+        description: "The date on which the inventory level was recorded."
+        tests:
+          - not_null
+          - unique
+          - date
+
+      - name: product_id
+        description: "The unique identifier for the product."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('staging_shopify__products')
+              field: product_id
+
+      - name: stock_level
+        description: "The quantity of the product available in inventory on the snapshot_date."
+        tests:
+          - not_null
+          - numeric
 

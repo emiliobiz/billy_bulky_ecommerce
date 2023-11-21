@@ -7,19 +7,19 @@ Below is a description of each table within the `marts` schema, outlining their 
 
 ## Dimensional Tables
 
-### dim_customers
+### customers
 - **Purpose**: To provide a single source of truth for customer-related dimensions.
 - **Contents**: Includes customer identifiers, names, emails, join dates, and countries, along with calculated metrics such as total orders and total spend.
 - **Usage**: Used in conjunction with fact tables to analyze customer behavior and segmentation.
 
-### dim_products
+### products
 - **Purpose**: To maintain a detailed view of product dimensions and performance metrics.
 - **Contents**: Contains product identifiers, names, categories, prices, and sales metrics like total units sold and total sales value.
 - **Usage**: Essential for product performance analysis, inventory management, and sales trend analysis.
 
 ## Fact Tables
 
-### sales_fact
+### sales
 - **Purpose**: To record transactional facts about each sale, linking to customer and product dimensions.
 - **Contents**: Comprises keys to the `customers` and `products` tables, order quantities, dates, statuses, and calculated sales values.
 - **Usage**: Acts as the central table for sales analysis, supporting reporting on sales trends, revenue, and other key business metrics.
@@ -34,5 +34,5 @@ Below is a description of each table within the `marts` schema, outlining their 
 
 - The `marts` layer tables are refreshed on a scheduled basis to ensure that reports reflect the most up-to-date information.
 - Users should be aware of the refresh schedule and data latency when performing time-sensitive analysis.
-- For any questions or concerns regarding the data models, please contact the data team.
+- For any questions or concerns regarding the data models, please contact the data team (aka, Emilio Biz).
 

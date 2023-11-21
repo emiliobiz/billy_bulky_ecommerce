@@ -14763,3 +14763,2665 @@ SELECT * FROM final
 [0m12:24:02.769278 [debug] [MainThread]: Command `dbt run` succeeded at 12:24:02.769191 after 10.50 seconds
 [0m12:24:02.769551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103cb16d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1598c87f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x159db2e80>]}
 [0m12:24:02.769837 [debug] [MainThread]: Flushing usage events
+[0m12:56:11.134812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107eb10d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1132f8af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113315ee0>]}
+
+
+============================== 12:56:11.137564 | ee1ed69a-3f13-4627-a338-a8f581e9a212 ==============================
+[0m12:56:11.137564 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:56:11.137920 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bitlevi/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/bitlevi/Documents/billy_bulky_ecommerce/billy_bulky_ecommerce/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:56:11.994050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d86de20>]}
+[0m12:56:12.041581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d9e5700>]}
+[0m12:56:12.042197 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:56:12.055739 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:56:12.092028 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m12:56:12.092549 [debug] [MainThread]: Partial parsing: added file: billy_bulky://models/intermediate/products/int_products__inventory.sql
+[0m12:56:12.092870 [debug] [MainThread]: Partial parsing: updated file: billy_bulky://models/intermediate/products/_int_products__models.yml
+[0m12:56:12.197836 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_products_inventory' in the 'models' section of file 'models/intermediate/products/_int_products__models.yml'
+[0m12:56:12.303992 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_snapshot_date.ea839d8715' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.304361 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_int_products_inventory_snapshot_date.957e4a3412' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.304664 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.date_int_products_inventory_snapshot_date.a5f6775670' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.304912 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_product_id.f6ac5935e3' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.305151 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_int_products_inventory_product_id__product_id__ref_staging_shopify__products_.74f8c28027' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.305388 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_stock_level.31d0098b4a' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.305604 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.numeric_int_products_inventory_stock_level.dd2cae1df8' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m12:56:12.316559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13ea2c0d0>]}
+[0m12:56:12.329061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e640eb0>]}
+[0m12:56:12.329403 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 seed, 47 tests, 4 sources, 0 exposures, 0 metrics, 431 macros, 0 groups, 0 semantic models
+[0m12:56:12.329624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e6407c0>]}
+[0m12:56:12.331139 [info ] [MainThread]: 
+[0m12:56:12.331647 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:56:12.332502 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:56:12.332984 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:56:12.339787 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:56:12.342046 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:56:12.343507 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:56:12.344816 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:56:12.345027 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:56:12.345222 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:56:12.345408 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:56:12.345585 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:56:12.345757 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:56:12.345921 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:56:13.870864 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m12:56:13.874949 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:56:13.878424 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m12:56:13.881018 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:56:13.882267 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m12:56:13.886433 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:56:14.434366 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_staging)
+[0m12:56:14.435937 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_snapshots)
+[0m12:56:14.436637 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_marts)
+[0m12:56:14.444228 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_snapshots"
+[0m12:56:14.444890 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_PUBLIC'
+[0m12:56:14.446664 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_staging"
+[0m12:56:14.448553 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_marts"
+[0m12:56:14.449145 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_intermediate'
+[0m12:56:14.449507 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_snapshots"} */
+show terse objects in E_COMMERCE.snapshots limit 10000
+[0m12:56:14.451356 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_PUBLIC"
+[0m12:56:14.451637 [debug] [ThreadPool]: On list_E_COMMERCE_staging: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_staging"} */
+show terse objects in E_COMMERCE.staging limit 10000
+[0m12:56:14.451899 [debug] [ThreadPool]: On list_E_COMMERCE_marts: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_marts"} */
+show terse objects in E_COMMERCE.marts limit 10000
+[0m12:56:14.453651 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_intermediate"
+[0m12:56:14.453906 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:56:14.454158 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_PUBLIC"} */
+show terse objects in E_COMMERCE.PUBLIC limit 10000
+[0m12:56:14.454391 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:56:14.454612 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:56:14.454847 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_intermediate"} */
+show terse objects in E_COMMERCE.intermediate limit 10000
+[0m12:56:14.455577 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:56:14.458200 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:56:15.635141 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:56:15.635998 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:56:15.637668 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: Close
+[0m12:56:15.638825 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:56:15.640366 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: Close
+[0m12:56:15.643038 [debug] [ThreadPool]: On list_E_COMMERCE_marts: Close
+[0m12:56:15.700276 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m12:56:15.701649 [debug] [ThreadPool]: On list_E_COMMERCE_staging: Close
+[0m12:56:15.718590 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b07a0c-0001-834e-0004-d8be00011402
+[0m12:56:15.718918 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m12:56:15.719240 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m12:56:15.719468 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m12:56:15.719736 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: Close
+[0m12:56:16.072617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13eaabcd0>]}
+[0m12:56:16.074136 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m12:56:16.074788 [info ] [MainThread]: 
+[0m12:56:16.079442 [debug] [Thread-1  ]: Began running node model.billy_bulky.staging__shopify__products_history
+[0m12:56:16.080119 [debug] [Thread-2  ]: Began running node model.billy_bulky.staging_shopify__customers
+[0m12:56:16.080703 [debug] [Thread-3  ]: Began running node model.billy_bulky.staging_shopify__orders
+[0m12:56:16.081367 [info ] [Thread-1  ]: 1 of 8 START sql view model staging.staging__shopify__products_history ......... [RUN]
+[0m12:56:16.082948 [info ] [Thread-2  ]: 2 of 8 START sql view model staging.staging_shopify__customers ................. [RUN]
+[0m12:56:16.083825 [info ] [Thread-3  ]: 3 of 8 START sql view model staging.staging_shopify__orders .................... [RUN]
+[0m12:56:16.085028 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_staging, now model.billy_bulky.staging__shopify__products_history)
+[0m12:56:16.082031 [debug] [Thread-4  ]: Began running node model.billy_bulky.staging_shopify__products
+[0m12:56:16.086708 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_snapshots, now model.billy_bulky.staging_shopify__customers)
+[0m12:56:16.087655 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_marts, now model.billy_bulky.staging_shopify__orders)
+[0m12:56:16.088251 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.staging__shopify__products_history
+[0m12:56:16.088933 [info ] [Thread-4  ]: 4 of 8 START sql view model staging.staging_shopify__products .................. [RUN]
+[0m12:56:16.089520 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.staging_shopify__customers
+[0m12:56:16.090035 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.staging_shopify__orders
+[0m12:56:16.097211 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_PUBLIC, now model.billy_bulky.staging_shopify__products)
+[0m12:56:16.101338 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:56:16.105195 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__customers"
+[0m12:56:16.108218 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__orders"
+[0m12:56:16.108690 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.staging_shopify__products
+[0m12:56:16.112021 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__products"
+[0m12:56:16.112723 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (compile): 12:56:16.105490 => 12:56:16.112503
+[0m12:56:16.113168 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (compile): 12:56:16.101689 => 12:56:16.112954
+[0m12:56:16.113612 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (compile): 12:56:16.090377 => 12:56:16.113379
+[0m12:56:16.113985 [debug] [Thread-3  ]: Began executing node model.billy_bulky.staging_shopify__orders
+[0m12:56:16.114386 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (compile): 12:56:16.109229 => 12:56:16.114188
+[0m12:56:16.114755 [debug] [Thread-2  ]: Began executing node model.billy_bulky.staging_shopify__customers
+[0m12:56:16.115134 [debug] [Thread-1  ]: Began executing node model.billy_bulky.staging__shopify__products_history
+[0m12:56:16.143887 [debug] [Thread-4  ]: Began executing node model.billy_bulky.staging_shopify__products
+[0m12:56:16.168002 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__orders"
+[0m12:56:16.169272 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__customers"
+[0m12:56:16.171649 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:56:16.174959 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__products"
+[0m12:56:16.176216 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.staging_shopify__customers"
+[0m12:56:16.176759 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.staging__shopify__products_history"
+[0m12:56:16.177012 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__customers"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__customers
+  
+   as (
+    WITH customers AS (
+    SELECT * FROM SHOPIFY.PUBLIC.customers
+)
+
+SELECT
+    CUSTOMER_ID
+    , FIRST_NAME
+    , LAST_NAME
+    , EMAIL
+    , JOIN_DATE
+    , COUNTRY
+FROM customers
+  );
+[0m12:56:16.177463 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.staging_shopify__orders"
+[0m12:56:16.177888 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.staging_shopify__products"
+[0m12:56:16.178150 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging__shopify__products_history"} */
+create or replace   view E_COMMERCE.staging.staging__shopify__products_history
+  
+   as (
+    WITH products AS (
+    SELECT * FROM E_COMMERCE.SNAPSHOTS.products_snapshot
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+    , DBT_SCD_ID
+    , DBT_UPDATED_AT
+    , DBT_VALID_FROM
+    , DBT_VALID_TO
+FROM products
+  );
+[0m12:56:16.178404 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m12:56:16.178647 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__orders"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__orders
+  
+   as (
+    WITH orders AS (
+    SELECT * FROM SHOPIFY.PUBLIC.orders
+)
+
+SELECT
+    ORDER_ID
+    , CUSTOMER_ID
+    , PRODUCT_ID
+    , QUANTITY
+    , ORDER_DATE
+    , STATUS
+FROM orders
+  );
+[0m12:56:16.178900 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__products"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__products
+  
+   as (
+    WITH products AS (
+    SELECT * FROM SHOPIFY.PUBLIC.products
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+FROM products
+  );
+[0m12:56:16.179134 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:56:16.179516 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m12:56:16.179971 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m12:56:17.423028 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:56:17.448347 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:56:17.474705 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (execute): 12:56:16.171923 => 12:56:17.474388
+[0m12:56:17.478586 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (execute): 12:56:16.115363 => 12:56:17.478351
+[0m12:56:17.479357 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: Close
+[0m12:56:17.480034 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:56:17.480624 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:56:17.481047 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: Close
+[0m12:56:17.484393 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (execute): 12:56:16.169512 => 12:56:17.484191
+[0m12:56:17.486457 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (execute): 12:56:16.156450 => 12:56:17.486262
+[0m12:56:17.488161 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: Close
+[0m12:56:17.488527 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: Close
+[0m12:56:17.853234 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13eaac160>]}
+[0m12:56:17.854834 [info ] [Thread-4  ]: 4 of 8 OK created sql view model staging.staging_shopify__products ............. [[32mSUCCESS 1[0m in 1.76s]
+[0m12:56:17.857192 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f652280>]}
+[0m12:56:17.858696 [debug] [Thread-4  ]: Finished running node model.billy_bulky.staging_shopify__products
+[0m12:56:17.860591 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13eaac130>]}
+[0m12:56:17.862398 [info ] [Thread-3  ]: 3 of 8 OK created sql view model staging.staging_shopify__orders ............... [[32mSUCCESS 1[0m in 1.77s]
+[0m12:56:17.863667 [info ] [Thread-2  ]: 2 of 8 OK created sql view model staging.staging_shopify__customers ............ [[32mSUCCESS 1[0m in 1.77s]
+[0m12:56:17.864692 [debug] [Thread-6  ]: Began running node model.billy_bulky.int_products__inventory
+[0m12:56:17.865916 [debug] [Thread-3  ]: Finished running node model.billy_bulky.staging_shopify__orders
+[0m12:56:17.867090 [debug] [Thread-2  ]: Finished running node model.billy_bulky.staging_shopify__customers
+[0m12:56:17.868013 [info ] [Thread-6  ]: 5 of 8 START sql incremental model intermediate.int_products__inventory ........ [RUN]
+[0m12:56:17.870387 [debug] [Thread-6  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products__inventory'
+[0m12:56:17.871832 [debug] [Thread-8  ]: Began running node model.billy_bulky.int_products_performance
+[0m12:56:17.872765 [debug] [Thread-6  ]: Began compiling node model.billy_bulky.int_products__inventory
+[0m12:56:17.873613 [debug] [Thread-9  ]: Began running node model.billy_bulky.int_sales_trend
+[0m12:56:17.874385 [debug] [Thread-10 ]: Began running node model.billy_bulky.int_customers_segmentation
+[0m12:56:17.875705 [debug] [Thread-8  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_performance'
+[0m12:56:17.883369 [debug] [Thread-6  ]: Writing injected SQL for node "model.billy_bulky.int_products__inventory"
+[0m12:56:17.884398 [debug] [Thread-9  ]: Acquiring new snowflake connection 'model.billy_bulky.int_sales_trend'
+[0m12:56:17.885403 [debug] [Thread-10 ]: Acquiring new snowflake connection 'model.billy_bulky.int_customers_segmentation'
+[0m12:56:17.885946 [debug] [Thread-8  ]: Began compiling node model.billy_bulky.int_products_performance
+[0m12:56:17.886587 [debug] [Thread-9  ]: Began compiling node model.billy_bulky.int_sales_trend
+[0m12:56:17.887161 [debug] [Thread-10 ]: Began compiling node model.billy_bulky.int_customers_segmentation
+[0m12:56:17.893032 [debug] [Thread-8  ]: Writing injected SQL for node "model.billy_bulky.int_products_performance"
+[0m12:56:17.897229 [debug] [Thread-9  ]: Writing injected SQL for node "model.billy_bulky.int_sales_trend"
+[0m12:56:17.901538 [debug] [Thread-10 ]: Writing injected SQL for node "model.billy_bulky.int_customers_segmentation"
+[0m12:56:17.902244 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_products__inventory (compile): 12:56:17.876174 => 12:56:17.901943
+[0m12:56:17.903503 [debug] [Thread-8  ]: Timing info for model.billy_bulky.int_products_performance (compile): 12:56:17.887817 => 12:56:17.903227
+[0m12:56:17.903945 [debug] [Thread-6  ]: Began executing node model.billy_bulky.int_products__inventory
+[0m12:56:17.905044 [debug] [Thread-8  ]: Finished running node model.billy_bulky.int_products_performance
+[0m12:56:17.905526 [debug] [Thread-10 ]: Timing info for model.billy_bulky.int_customers_segmentation (compile): 12:56:17.897614 => 12:56:17.905298
+[0m12:56:17.905964 [debug] [Thread-9  ]: Timing info for model.billy_bulky.int_sales_trend (compile): 12:56:17.893409 => 12:56:17.905755
+[0m12:56:17.906751 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f691e50>]}
+[0m12:56:17.919930 [debug] [Thread-4  ]: Began running node model.billy_bulky.products
+[0m12:56:17.920778 [debug] [Thread-10 ]: Finished running node model.billy_bulky.int_customers_segmentation
+[0m12:56:17.944449 [debug] [Thread-6  ]: Writing runtime sql for node "model.billy_bulky.int_products__inventory"
+[0m12:56:17.944991 [debug] [Thread-9  ]: Finished running node model.billy_bulky.int_sales_trend
+[0m12:56:17.945314 [info ] [Thread-4  ]: 6 of 8 START sql table model marts.products .................................... [RUN]
+[0m12:56:17.945838 [info ] [Thread-1  ]: 1 of 8 OK created sql view model staging.staging__shopify__products_history .... [[32mSUCCESS 1[0m in 1.82s]
+[0m12:56:17.946189 [debug] [Thread-3  ]: Began running node model.billy_bulky.customers
+[0m12:56:17.946688 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__products, now model.billy_bulky.products)
+[0m12:56:17.947373 [debug] [Thread-6  ]: Using snowflake connection "model.billy_bulky.int_products__inventory"
+[0m12:56:17.947706 [debug] [Thread-1  ]: Finished running node model.billy_bulky.staging__shopify__products_history
+[0m12:56:17.947923 [debug] [Thread-5  ]: Began running node model.billy_bulky.sales
+[0m12:56:17.948180 [info ] [Thread-3  ]: 7 of 8 START sql table model marts.customers ................................... [RUN]
+[0m12:56:17.948423 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.products
+[0m12:56:17.948667 [debug] [Thread-6  ]: On model.billy_bulky.int_products__inventory: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_products__inventory"} */
+create or replace transient table E_COMMERCE.intermediate.int_products__inventory
+         as
+        (
+
+WITH inventory_data AS (
+    SELECT
+        DATE_TRUNC('day', CURRENT_TIMESTAMP) AS snapshot_date
+        , p.PRODUCT_ID
+        , p.STOCK_LEVEL
+    FROM E_COMMERCE.staging.staging_shopify__products p
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM E_COMMERCE.intermediate.int_products__inventory
+        WHERE snapshot_date = DATE_TRUNC('day', CURRENT_TIMESTAMP)
+          AND PRODUCT_ID = p.PRODUCT_ID
+    )
+)
+
+SELECT
+    snapshot_date
+    , PRODUCT_ID
+    , STOCK_LEVEL
+FROM inventory_data
+
+
+        );
+[0m12:56:17.948985 [info ] [Thread-5  ]: 8 of 8 START sql table model marts.sales ....................................... [RUN]
+[0m12:56:17.949411 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__orders, now model.billy_bulky.customers)
+[0m12:56:17.953368 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.products"
+[0m12:56:17.953614 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m12:56:17.954003 [debug] [Thread-5  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_intermediate, now model.billy_bulky.sales)
+[0m12:56:17.954236 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.customers
+[0m12:56:17.954677 [debug] [Thread-5  ]: Began compiling node model.billy_bulky.sales
+[0m12:56:17.962014 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.customers"
+[0m12:56:17.968617 [debug] [Thread-4  ]: Timing info for model.billy_bulky.products (compile): 12:56:17.949577 => 12:56:17.968463
+[0m12:56:17.969958 [debug] [Thread-5  ]: Writing injected SQL for node "model.billy_bulky.sales"
+[0m12:56:17.970298 [debug] [Thread-4  ]: Began executing node model.billy_bulky.products
+[0m12:56:17.976503 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.products"
+[0m12:56:17.977156 [debug] [Thread-5  ]: Timing info for model.billy_bulky.sales (compile): 12:56:17.962169 => 12:56:17.977023
+[0m12:56:17.977381 [debug] [Thread-5  ]: Began executing node model.billy_bulky.sales
+[0m12:56:17.977632 [debug] [Thread-3  ]: Timing info for model.billy_bulky.customers (compile): 12:56:17.955181 => 12:56:17.977506
+[0m12:56:17.979329 [debug] [Thread-5  ]: Writing runtime sql for node "model.billy_bulky.sales"
+[0m12:56:17.980773 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.products"
+[0m12:56:17.981045 [debug] [Thread-3  ]: Began executing node model.billy_bulky.customers
+[0m12:56:17.981430 [debug] [Thread-4  ]: On model.billy_bulky.products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.products"} */
+create or replace transient table E_COMMERCE.marts.products
+         as
+        (WITH  __dbt__cte__int_products_performance as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, product_sales AS (
+    SELECT
+        o.PRODUCT_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS total_sales
+        , SUM(o.QUANTITY) AS total_units_sold
+        , SUM(o.QUANTITY * p.PRICE) AS total_sales_value
+    FROM orders o
+    INNER JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY o.PRODUCT_ID
+)
+
+, product_averages AS (
+    SELECT
+        PRODUCT_ID
+        , (total_sales_value / NULLIF(total_units_sold, 0)) AS average_sale_price
+    FROM product_sales
+)
+
+, product_stock_turnover AS (
+    SELECT
+        p.PRODUCT_ID
+        , p.STOCK_LEVEL
+        , (total_units_sold / NULLIF(p.STOCK_LEVEL, 0)) AS turnover_rate
+    FROM product_sales ps
+    INNER JOIN products p ON ps.PRODUCT_ID = p.PRODUCT_ID
+)
+
+, final AS (
+    SELECT
+    p.PRODUCT_ID
+    , p.NAME
+    , p.CATEGORY
+    , p.PRICE
+    , pa.average_sale_price
+    , ps.total_sales
+    , ps.total_units_sold
+    , ps.total_sales_value
+    , pst.turnover_rate
+    , p.STOCK_LEVEL
+FROM products p
+LEFT JOIN product_sales ps ON p.PRODUCT_ID = ps.PRODUCT_ID
+LEFT JOIN product_averages pa ON p.PRODUCT_ID = pa.PRODUCT_ID
+LEFT JOIN product_stock_turnover pst ON p.PRODUCT_ID = pst.PRODUCT_ID
+)
+
+SELECT * FROM final
+), final AS (
+    SELECT
+        pp.PRODUCT_ID
+        , pp.NAME
+        , pp.CATEGORY
+        , pp.PRICE
+        , pp.average_sale_price
+        , pp.total_sales
+        , pp.total_units_sold
+        , pp.total_sales_value
+        , pp.turnover_rate
+        , pp.STOCK_LEVEL
+    FROM __dbt__cte__int_products_performance pp
+)
+
+SELECT * FROM final
+        );
+[0m12:56:17.983272 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.customers"
+[0m12:56:17.983544 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m12:56:17.985811 [debug] [Thread-5  ]: Using snowflake connection "model.billy_bulky.sales"
+[0m12:56:17.986353 [debug] [Thread-5  ]: On model.billy_bulky.sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.sales"} */
+create or replace transient table E_COMMERCE.marts.sales
+         as
+        (WITH  __dbt__cte__int_sales_trend as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, daily_sales AS (
+    SELECT
+        DATE(ORDER_DATE) AS sale_date
+        , COUNT(DISTINCT ORDER_ID) AS total_orders
+        , SUM(QUANTITY) AS total_units_sold
+        , SUM(QUANTITY * PRICE) AS total_sales_value
+    FROM orders AS o
+    JOIN products AS p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY sale_date
+)
+
+, weekly_sales AS (
+    SELECT
+        DATE_TRUNC('week', sale_date) AS sale_week
+        , SUM(total_orders) AS weekly_orders
+        , SUM(total_units_sold) AS weekly_units_sold
+        , SUM(total_sales_value) AS weekly_sales_value
+    FROM daily_sales
+    GROUP BY sale_week
+)
+
+, monthly_sales AS (
+    SELECT
+        DATE_TRUNC('month', sale_date) AS sale_month
+        , SUM(total_orders) AS monthly_orders
+        , SUM(total_units_sold) AS monthly_units_sold
+        , SUM(total_sales_value) AS monthly_sales_value
+    FROM daily_sales
+    GROUP BY sale_month
+)
+
+, yearly_sales AS (
+    SELECT
+        DATE_TRUNC('year', sale_date) AS sale_year
+        , SUM(total_orders) AS yearly_orders
+        , SUM(total_units_sold) AS yearly_units_sold
+        , SUM(total_sales_value) AS yearly_sales_value
+    FROM daily_sales
+    GROUP BY sale_year
+)
+
+SELECT
+    d.sale_date
+    , d.total_orders AS daily_orders
+    , d.total_units_sold AS daily_units_sold
+    , d.total_sales_value AS daily_sales_value
+    , w.weekly_orders
+    , w.weekly_units_sold
+    , w.weekly_sales_value
+    , m.monthly_orders
+    , m.monthly_units_sold
+    , m.monthly_sales_value
+    , y.yearly_orders
+    , y.yearly_units_sold
+    , y.yearly_sales_value
+FROM daily_sales d
+LEFT JOIN weekly_sales w ON DATE_TRUNC('week', d.sale_date) = w.sale_week
+LEFT JOIN monthly_sales m ON DATE_TRUNC('month', d.sale_date) = m.sale_month
+LEFT JOIN yearly_sales y ON DATE_TRUNC('year', d.sale_date) = y.sale_year
+), enriched_orders AS (
+    SELECT
+        o.ORDER_ID
+        , o.CUSTOMER_ID
+        , o.PRODUCT_ID
+        , o.QUANTITY
+        , o.ORDER_DATE
+        , o.STATUS
+        , p.CATEGORY
+        , p.PRICE AS unit_price
+        , (o.QUANTITY * p.PRICE) AS total_price
+        , c.COUNTRY
+    FROM E_COMMERCE.staging.staging_shopify__orders o
+    JOIN E_COMMERCE.staging.staging_shopify__products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    JOIN E_COMMERCE.staging.staging_shopify__customers c ON o.CUSTOMER_ID = c.CUSTOMER_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+)
+
+SELECT
+    eo.ORDER_ID
+    , eo.CUSTOMER_ID
+    , eo.PRODUCT_ID
+    , eo.QUANTITY
+    , eo.ORDER_DATE
+    , eo.STATUS
+    , eo.CATEGORY
+    , eo.unit_price
+    , eo.total_price
+    , eo.COUNTRY
+    , sa.daily_orders
+    , sa.daily_units_sold
+    , sa.daily_sales_value
+FROM enriched_orders eo
+LEFT JOIN __dbt__cte__int_sales_trend sa ON DATE(eo.ORDER_DATE) = sa.sale_date
+        );
+[0m12:56:17.986678 [debug] [Thread-5  ]: Opening a new connection, currently in state closed
+[0m12:56:17.988910 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.customers"
+[0m12:56:17.989237 [debug] [Thread-3  ]: On model.billy_bulky.customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.customers"} */
+create or replace transient table E_COMMERCE.marts.customers
+         as
+        (WITH  __dbt__cte__int_customers_segmentation as (
+WITH customers AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__customers
+)
+
+, orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, order_aggregates AS (
+    SELECT
+        o.CUSTOMER_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS frequency
+        , SUM(o.QUANTITY * p.PRICE) AS monetary
+        , AVG(o.QUANTITY * p.PRICE) AS average_order_value
+        , MAX(o.ORDER_DATE) AS last_purchase_date
+        , COUNT(CASE WHEN o.STATUS = 'cancelled' THEN 1 END) AS cancelled_orders
+        , COUNT(*) AS total_orders
+    FROM orders o
+    JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    GROUP BY o.CUSTOMER_ID
+)
+
+, customer_tenure AS (
+    SELECT
+        CUSTOMER_ID
+        , JOIN_DATE
+        , CURRENT_DATE - JOIN_DATE AS tenure
+    FROM customers
+)
+
+, customer_recency AS (
+    SELECT
+        CUSTOMER_ID
+        , CURRENT_DATE - last_purchase_date AS recency
+    FROM order_aggregates
+)
+
+, final AS (
+    SELECT
+        c.CUSTOMER_ID
+        , c.FIRST_NAME
+        , c.LAST_NAME
+        , c.EMAIL
+        , c.JOIN_DATE
+        , c.COUNTRY
+        , o.frequency
+        , o.monetary
+        , o.average_order_value
+        , o.cancelled_orders
+        , o.total_orders
+        , CASE 
+            WHEN o.total_orders > 0 THEN ROUND((o.cancelled_orders::FLOAT / o.total_orders) * 100, 2) 
+            ELSE 0 
+          END AS cancellation_rate
+        , r.recency
+        , t.tenure
+    FROM customer_tenure t
+    JOIN customers c ON t.CUSTOMER_ID = c.CUSTOMER_ID
+    JOIN order_aggregates o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    JOIN customer_recency r ON c.CUSTOMER_ID = r.CUSTOMER_ID
+)
+
+SELECT * FROM final
+), source AS (
+    SELECT
+        icp.CUSTOMER_ID
+        , icp.FIRST_NAME
+        , icp.LAST_NAME
+        , icp.EMAIL
+        , icp.JOIN_DATE
+        , icp.COUNTRY
+        , icp.frequency AS total_orders
+        , icp.monetary AS total_spent
+        , icp.recency
+        , icp.tenure
+    FROM __dbt__cte__int_customers_segmentation icp
+)
+
+, final AS (
+SELECT
+    s.CUSTOMER_ID
+    , s.FIRST_NAME
+    , s.LAST_NAME
+    , s.EMAIL
+    , s.JOIN_DATE
+    , s.COUNTRY
+    , s.total_orders
+    , s.total_spent
+    , s.recency
+    , s.tenure
+    , CASE
+        WHEN total_spent > 1000 THEN 'VIP'
+        ELSE 'Regular'
+    END AS customer_segment
+FROM source s
+)
+
+SELECT * FROM final
+        );
+[0m12:56:17.989548 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m12:56:19.344457 [debug] [Thread-6  ]: Snowflake adapter: Snowflake query id: 01b07a0c-0001-834e-0004-d8be0001140a
+[0m12:56:19.345125 [debug] [Thread-6  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS__INVENTORY' does not exist or not authorized.
+[0m12:56:19.345839 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_products__inventory (execute): 12:56:17.907030 => 12:56:19.345536
+[0m12:56:19.346351 [debug] [Thread-6  ]: On model.billy_bulky.int_products__inventory: Close
+[0m12:56:19.785024 [debug] [Thread-6  ]: Database Error in model int_products__inventory (models/intermediate/products/int_products__inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS__INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products__inventory.sql
+[0m12:56:19.785928 [debug] [Thread-6  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f634ca0>]}
+[0m12:56:19.786944 [error] [Thread-6  ]: 5 of 8 ERROR creating sql incremental model intermediate.int_products__inventory  [[31mERROR[0m in 1.92s]
+[0m12:56:19.787896 [debug] [Thread-6  ]: Finished running node model.billy_bulky.int_products__inventory
+[0m12:56:20.520976 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:56:20.523732 [debug] [Thread-4  ]: Timing info for model.billy_bulky.products (execute): 12:56:17.970685 => 12:56:20.523494
+[0m12:56:20.524162 [debug] [Thread-4  ]: On model.billy_bulky.products: Close
+[0m12:56:20.636212 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:56:20.639849 [debug] [Thread-5  ]: Timing info for model.billy_bulky.sales (execute): 12:56:17.977770 => 12:56:20.639544
+[0m12:56:20.640434 [debug] [Thread-5  ]: On model.billy_bulky.sales: Close
+[0m12:56:20.686501 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:56:20.689646 [debug] [Thread-3  ]: Timing info for model.billy_bulky.customers (execute): 12:56:17.981689 => 12:56:20.689377
+[0m12:56:20.690117 [debug] [Thread-3  ]: On model.billy_bulky.customers: Close
+[0m12:56:20.877830 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f632340>]}
+[0m12:56:20.879100 [info ] [Thread-4  ]: 6 of 8 OK created sql table model marts.products ............................... [[32mSUCCESS 1[0m in 2.93s]
+[0m12:56:20.880138 [debug] [Thread-4  ]: Finished running node model.billy_bulky.products
+[0m12:56:21.004343 [debug] [Thread-5  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f0cafa0>]}
+[0m12:56:21.005877 [info ] [Thread-5  ]: 8 of 8 OK created sql table model marts.sales .................................. [[32mSUCCESS 1[0m in 3.05s]
+[0m12:56:21.006922 [debug] [Thread-5  ]: Finished running node model.billy_bulky.sales
+[0m12:56:21.041226 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee1ed69a-3f13-4627-a338-a8f581e9a212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f37a250>]}
+[0m12:56:21.042406 [info ] [Thread-3  ]: 7 of 8 OK created sql table model marts.customers .............................. [[32mSUCCESS 1[0m in 3.09s]
+[0m12:56:21.043420 [debug] [Thread-3  ]: Finished running node model.billy_bulky.customers
+[0m12:56:21.045877 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:56:21.046403 [debug] [MainThread]: Connection 'model.billy_bulky.staging__shopify__products_history' was properly closed.
+[0m12:56:21.046839 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__customers' was properly closed.
+[0m12:56:21.047255 [debug] [MainThread]: Connection 'model.billy_bulky.customers' was properly closed.
+[0m12:56:21.047673 [debug] [MainThread]: Connection 'model.billy_bulky.products' was properly closed.
+[0m12:56:21.048063 [debug] [MainThread]: Connection 'model.billy_bulky.sales' was properly closed.
+[0m12:56:21.048445 [debug] [MainThread]: Connection 'model.billy_bulky.int_products__inventory' was properly closed.
+[0m12:56:21.048828 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_performance' was properly closed.
+[0m12:56:21.049212 [debug] [MainThread]: Connection 'model.billy_bulky.int_sales_trend' was properly closed.
+[0m12:56:21.049593 [debug] [MainThread]: Connection 'model.billy_bulky.int_customers_segmentation' was properly closed.
+[0m12:56:21.050114 [info ] [MainThread]: 
+[0m12:56:21.050604 [info ] [MainThread]: Finished running 4 view models, 1 incremental model, 3 table models in 0 hours 0 minutes and 8.72 seconds (8.72s).
+[0m12:56:21.052675 [debug] [MainThread]: Command end result
+[0m12:56:21.070490 [info ] [MainThread]: 
+[0m12:56:21.070990 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:56:21.071347 [info ] [MainThread]: 
+[0m12:56:21.071722 [error] [MainThread]:   Database Error in model int_products__inventory (models/intermediate/products/int_products__inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS__INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products__inventory.sql
+[0m12:56:21.072099 [info ] [MainThread]: 
+[0m12:56:21.072455 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+[0m12:56:21.075570 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.977903, "process_user_time": 5.783027, "process_kernel_time": 0.454166, "process_mem_max_rss": "226902016", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:56:21.076071 [debug] [MainThread]: Command `dbt run` failed at 12:56:21.075954 after 9.98 seconds
+[0m12:56:21.076438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107eb10d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d975cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f6948e0>]}
+[0m12:56:21.076807 [debug] [MainThread]: Flushing usage events
+[0m12:57:40.107857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d316d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10471e9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110238400>]}
+
+
+============================== 12:57:40.110943 | b396f709-4e16-47a9-89de-d6c0a8e64267 ==============================
+[0m12:57:40.110943 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:57:40.111319 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/bitlevi/Documents/billy_bulky_ecommerce/billy_bulky_ecommerce/logs', 'profiles_dir': '/Users/bitlevi/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m12:57:40.944210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10471e9d0>]}
+[0m12:57:40.991871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132765550>]}
+[0m12:57:40.992481 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:57:41.011578 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:57:41.046371 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m12:57:41.046925 [debug] [MainThread]: Partial parsing: added file: billy_bulky://models/intermediate/products/int_products_inventory.sql
+[0m12:57:41.047140 [debug] [MainThread]: Partial parsing: deleted file: billy_bulky://models/intermediate/products/int_products__inventory.sql
+[0m12:57:41.133740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1331917c0>]}
+[0m12:57:41.186029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13326b820>]}
+[0m12:57:41.186381 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 seed, 47 tests, 4 sources, 0 exposures, 0 metrics, 431 macros, 0 groups, 0 semantic models
+[0m12:57:41.186606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13326baf0>]}
+[0m12:57:41.188062 [info ] [MainThread]: 
+[0m12:57:41.188561 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:57:41.189403 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:57:41.189877 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:57:41.190485 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:57:41.198900 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:57:41.200679 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:57:41.202475 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:57:41.202711 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:57:41.202908 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:57:41.203097 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:57:41.203280 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:41.203447 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:41.203611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:42.683432 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:57:42.687233 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:57:42.692180 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:57:42.693399 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:57:42.696327 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:57:42.699320 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:57:43.122280 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_PUBLIC)
+[0m12:57:43.125074 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_snapshots)
+[0m12:57:43.131546 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_intermediate)
+[0m12:57:43.145106 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_staging'
+[0m12:57:43.148339 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_intermediate"
+[0m12:57:43.149349 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_snapshots"
+[0m12:57:43.152079 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_PUBLIC"
+[0m12:57:43.152781 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_marts'
+[0m12:57:43.155319 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_staging"
+[0m12:57:43.155788 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_intermediate"} */
+show terse objects in E_COMMERCE.intermediate limit 10000
+[0m12:57:43.156165 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_snapshots"} */
+show terse objects in E_COMMERCE.snapshots limit 10000
+[0m12:57:43.156531 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_PUBLIC"} */
+show terse objects in E_COMMERCE.PUBLIC limit 10000
+[0m12:57:43.159081 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_marts"
+[0m12:57:43.159466 [debug] [ThreadPool]: On list_E_COMMERCE_staging: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_staging"} */
+show terse objects in E_COMMERCE.staging limit 10000
+[0m12:57:43.159804 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:57:43.160132 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:57:43.160440 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:57:43.160762 [debug] [ThreadPool]: On list_E_COMMERCE_marts: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_marts"} */
+show terse objects in E_COMMERCE.marts limit 10000
+[0m12:57:43.161076 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:43.165257 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:44.321488 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:57:44.324468 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: Close
+[0m12:57:44.344323 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:57:44.345962 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:57:44.348483 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: Close
+[0m12:57:44.350442 [debug] [ThreadPool]: On list_E_COMMERCE_marts: Close
+[0m12:57:44.366840 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m12:57:44.369102 [debug] [ThreadPool]: On list_E_COMMERCE_staging: Close
+[0m12:57:44.412383 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b07a0d-0001-8184-0004-d8be0001059a
+[0m12:57:44.412724 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m12:57:44.413051 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m12:57:44.413293 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m12:57:44.413576 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: Close
+[0m12:57:44.775704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13326bf40>]}
+[0m12:57:44.776302 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m12:57:44.776537 [info ] [MainThread]: 
+[0m12:57:44.778490 [debug] [Thread-1  ]: Began running node model.billy_bulky.staging__shopify__products_history
+[0m12:57:44.778820 [debug] [Thread-2  ]: Began running node model.billy_bulky.staging_shopify__customers
+[0m12:57:44.779170 [info ] [Thread-1  ]: 1 of 8 START sql view model staging.staging__shopify__products_history ......... [RUN]
+[0m12:57:44.779485 [debug] [Thread-3  ]: Began running node model.billy_bulky.staging_shopify__orders
+[0m12:57:44.779796 [info ] [Thread-2  ]: 2 of 8 START sql view model staging.staging_shopify__customers ................. [RUN]
+[0m12:57:44.780818 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_PUBLIC, now model.billy_bulky.staging__shopify__products_history)
+[0m12:57:44.780131 [debug] [Thread-4  ]: Began running node model.billy_bulky.staging_shopify__products
+[0m12:57:44.781488 [info ] [Thread-3  ]: 3 of 8 START sql view model staging.staging_shopify__orders .................... [RUN]
+[0m12:57:44.781976 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_snapshots, now model.billy_bulky.staging_shopify__customers)
+[0m12:57:44.782253 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.staging__shopify__products_history
+[0m12:57:44.782562 [info ] [Thread-4  ]: 4 of 8 START sql view model staging.staging_shopify__products .................. [RUN]
+[0m12:57:44.783046 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_intermediate, now model.billy_bulky.staging_shopify__orders)
+[0m12:57:44.783316 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.staging_shopify__customers
+[0m12:57:44.791644 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_staging, now model.billy_bulky.staging_shopify__products)
+[0m12:57:44.795236 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:57:44.796285 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.staging_shopify__orders
+[0m12:57:44.798785 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.staging_shopify__products
+[0m12:57:44.801133 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__customers"
+[0m12:57:44.803332 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__orders"
+[0m12:57:44.805737 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__products"
+[0m12:57:44.806537 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (compile): 12:57:44.783478 => 12:57:44.806286
+[0m12:57:44.807292 [debug] [Thread-1  ]: Began executing node model.billy_bulky.staging__shopify__products_history
+[0m12:57:44.807739 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (compile): 12:57:44.803655 => 12:57:44.807569
+[0m12:57:44.814287 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (compile): 12:57:44.801409 => 12:57:44.813904
+[0m12:57:44.814786 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (compile): 12:57:44.796607 => 12:57:44.814608
+[0m12:57:44.827306 [debug] [Thread-4  ]: Began executing node model.billy_bulky.staging_shopify__products
+[0m12:57:44.829060 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:57:44.829422 [debug] [Thread-3  ]: Began executing node model.billy_bulky.staging_shopify__orders
+[0m12:57:44.829680 [debug] [Thread-2  ]: Began executing node model.billy_bulky.staging_shopify__customers
+[0m12:57:44.832165 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__products"
+[0m12:57:44.835095 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__orders"
+[0m12:57:44.838592 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__customers"
+[0m12:57:44.840150 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.staging__shopify__products_history"
+[0m12:57:44.840718 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging__shopify__products_history"} */
+create or replace   view E_COMMERCE.staging.staging__shopify__products_history
+  
+   as (
+    WITH products AS (
+    SELECT * FROM E_COMMERCE.SNAPSHOTS.products_snapshot
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+    , DBT_SCD_ID
+    , DBT_UPDATED_AT
+    , DBT_VALID_FROM
+    , DBT_VALID_TO
+FROM products
+  );
+[0m12:57:44.841005 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:57:44.841756 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.staging_shopify__orders"
+[0m12:57:44.842445 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.staging_shopify__products"
+[0m12:57:44.843146 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__orders"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__orders
+  
+   as (
+    WITH orders AS (
+    SELECT * FROM SHOPIFY.PUBLIC.orders
+)
+
+SELECT
+    ORDER_ID
+    , CUSTOMER_ID
+    , PRODUCT_ID
+    , QUANTITY
+    , ORDER_DATE
+    , STATUS
+FROM orders
+  );
+[0m12:57:44.844047 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__products"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__products
+  
+   as (
+    WITH products AS (
+    SELECT * FROM SHOPIFY.PUBLIC.products
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+FROM products
+  );
+[0m12:57:44.844883 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.staging_shopify__customers"
+[0m12:57:44.845297 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m12:57:44.845913 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m12:57:44.846596 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__customers"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__customers
+  
+   as (
+    WITH customers AS (
+    SELECT * FROM SHOPIFY.PUBLIC.customers
+)
+
+SELECT
+    CUSTOMER_ID
+    , FIRST_NAME
+    , LAST_NAME
+    , EMAIL
+    , JOIN_DATE
+    , COUNTRY
+FROM customers
+  );
+[0m12:57:44.848638 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m12:57:46.187951 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:57:46.190204 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:57:46.191870 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:57:46.242569 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (execute): 12:57:44.829845 => 12:57:46.242300
+[0m12:57:46.246193 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (execute): 12:57:44.835366 => 12:57:46.245961
+[0m12:57:46.246870 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:57:46.249043 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (execute): 12:57:44.807921 => 12:57:46.248841
+[0m12:57:46.249491 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: Close
+[0m12:57:46.249872 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: Close
+[0m12:57:46.251983 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (execute): 12:57:44.832528 => 12:57:46.251794
+[0m12:57:46.252372 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: Close
+[0m12:57:46.254701 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: Close
+[0m12:57:46.710913 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14544c250>]}
+[0m12:57:46.712723 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13326bf40>]}
+[0m12:57:46.713986 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14501ad30>]}
+[0m12:57:46.715300 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1332659d0>]}
+[0m12:57:46.716558 [info ] [Thread-1  ]: 1 of 8 OK created sql view model staging.staging__shopify__products_history .... [[32mSUCCESS 1[0m in 1.93s]
+[0m12:57:46.717436 [info ] [Thread-3  ]: 3 of 8 OK created sql view model staging.staging_shopify__orders ............... [[32mSUCCESS 1[0m in 1.93s]
+[0m12:57:46.718809 [info ] [Thread-2  ]: 2 of 8 OK created sql view model staging.staging_shopify__customers ............ [[32mSUCCESS 1[0m in 1.93s]
+[0m12:57:46.719683 [info ] [Thread-4  ]: 4 of 8 OK created sql view model staging.staging_shopify__products ............. [[32mSUCCESS 1[0m in 1.92s]
+[0m12:57:46.720980 [debug] [Thread-1  ]: Finished running node model.billy_bulky.staging__shopify__products_history
+[0m12:57:46.721916 [debug] [Thread-3  ]: Finished running node model.billy_bulky.staging_shopify__orders
+[0m12:57:46.722795 [debug] [Thread-2  ]: Finished running node model.billy_bulky.staging_shopify__customers
+[0m12:57:46.723671 [debug] [Thread-4  ]: Finished running node model.billy_bulky.staging_shopify__products
+[0m12:57:46.725804 [debug] [Thread-6  ]: Began running node model.billy_bulky.int_customers_segmentation
+[0m12:57:46.726575 [debug] [Thread-7  ]: Began running node model.billy_bulky.int_products_inventory
+[0m12:57:46.727764 [debug] [Thread-6  ]: Acquiring new snowflake connection 'model.billy_bulky.int_customers_segmentation'
+[0m12:57:46.728278 [debug] [Thread-8  ]: Began running node model.billy_bulky.int_products_performance
+[0m12:57:46.728862 [debug] [Thread-9  ]: Began running node model.billy_bulky.int_sales_trend
+[0m12:57:46.729526 [info ] [Thread-7  ]: 5 of 8 START sql incremental model intermediate.int_products_inventory ......... [RUN]
+[0m12:57:46.730097 [debug] [Thread-6  ]: Began compiling node model.billy_bulky.int_customers_segmentation
+[0m12:57:46.731071 [debug] [Thread-8  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_performance'
+[0m12:57:46.731994 [debug] [Thread-9  ]: Acquiring new snowflake connection 'model.billy_bulky.int_sales_trend'
+[0m12:57:46.732873 [debug] [Thread-7  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_inventory'
+[0m12:57:46.739568 [debug] [Thread-6  ]: Writing injected SQL for node "model.billy_bulky.int_customers_segmentation"
+[0m12:57:46.740248 [debug] [Thread-8  ]: Began compiling node model.billy_bulky.int_products_performance
+[0m12:57:46.740868 [debug] [Thread-9  ]: Began compiling node model.billy_bulky.int_sales_trend
+[0m12:57:46.741403 [debug] [Thread-7  ]: Began compiling node model.billy_bulky.int_products_inventory
+[0m12:57:46.747380 [debug] [Thread-8  ]: Writing injected SQL for node "model.billy_bulky.int_products_performance"
+[0m12:57:46.752776 [debug] [Thread-9  ]: Writing injected SQL for node "model.billy_bulky.int_sales_trend"
+[0m12:57:46.757445 [debug] [Thread-7  ]: Writing injected SQL for node "model.billy_bulky.int_products_inventory"
+[0m12:57:46.758110 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_customers_segmentation (compile): 12:57:46.733211 => 12:57:46.757818
+[0m12:57:46.759466 [debug] [Thread-6  ]: Finished running node model.billy_bulky.int_customers_segmentation
+[0m12:57:46.760069 [debug] [Thread-8  ]: Timing info for model.billy_bulky.int_products_performance (compile): 12:57:46.741876 => 12:57:46.759842
+[0m12:57:46.760964 [debug] [Thread-8  ]: Finished running node model.billy_bulky.int_products_performance
+[0m12:57:46.761615 [debug] [Thread-7  ]: Timing info for model.billy_bulky.int_products_inventory (compile): 12:57:46.753230 => 12:57:46.761386
+[0m12:57:46.762083 [debug] [Thread-7  ]: Began executing node model.billy_bulky.int_products_inventory
+[0m12:57:46.762530 [debug] [Thread-9  ]: Timing info for model.billy_bulky.int_sales_trend (compile): 12:57:46.748165 => 12:57:46.762333
+[0m12:57:46.762893 [debug] [Thread-5  ]: Began running node model.billy_bulky.customers
+[0m12:57:46.769610 [debug] [Thread-1  ]: Began running node model.billy_bulky.products
+[0m12:57:46.789386 [debug] [Thread-9  ]: Finished running node model.billy_bulky.int_sales_trend
+[0m12:57:46.800787 [debug] [Thread-7  ]: Writing runtime sql for node "model.billy_bulky.int_products_inventory"
+[0m12:57:46.801288 [info ] [Thread-5  ]: 6 of 8 START sql table model marts.customers ................................... [RUN]
+[0m12:57:46.801598 [info ] [Thread-1  ]: 7 of 8 START sql table model marts.products .................................... [RUN]
+[0m12:57:46.802131 [debug] [Thread-2  ]: Began running node model.billy_bulky.sales
+[0m12:57:46.802638 [debug] [Thread-5  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_marts, now model.billy_bulky.customers)
+[0m12:57:46.803053 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging__shopify__products_history, now model.billy_bulky.products)
+[0m12:57:46.803372 [info ] [Thread-2  ]: 8 of 8 START sql table model marts.sales ....................................... [RUN]
+[0m12:57:46.803669 [debug] [Thread-5  ]: Began compiling node model.billy_bulky.customers
+[0m12:57:46.804352 [debug] [Thread-7  ]: Using snowflake connection "model.billy_bulky.int_products_inventory"
+[0m12:57:46.804582 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.products
+[0m12:57:46.804969 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__customers, now model.billy_bulky.sales)
+[0m12:57:46.811298 [debug] [Thread-5  ]: Writing injected SQL for node "model.billy_bulky.customers"
+[0m12:57:46.811566 [debug] [Thread-7  ]: On model.billy_bulky.int_products_inventory: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_products_inventory"} */
+create or replace transient table E_COMMERCE.intermediate.int_products_inventory
+         as
+        (
+
+WITH inventory_data AS (
+    SELECT
+        DATE_TRUNC('day', CURRENT_TIMESTAMP) AS snapshot_date
+        , p.PRODUCT_ID
+        , p.STOCK_LEVEL
+    FROM E_COMMERCE.staging.staging_shopify__products p
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM E_COMMERCE.intermediate.int_products_inventory
+        WHERE snapshot_date = DATE_TRUNC('day', CURRENT_TIMESTAMP)
+          AND PRODUCT_ID = p.PRODUCT_ID
+    )
+)
+
+SELECT
+    snapshot_date
+    , PRODUCT_ID
+    , STOCK_LEVEL
+FROM inventory_data
+
+
+        );
+[0m12:57:46.816091 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.products"
+[0m12:57:46.816536 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.sales
+[0m12:57:46.816962 [debug] [Thread-7  ]: Opening a new connection, currently in state init
+[0m12:57:46.825271 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.sales"
+[0m12:57:46.826009 [debug] [Thread-5  ]: Timing info for model.billy_bulky.customers (compile): 12:57:46.805133 => 12:57:46.825855
+[0m12:57:46.826619 [debug] [Thread-1  ]: Timing info for model.billy_bulky.products (compile): 12:57:46.811754 => 12:57:46.826488
+[0m12:57:46.826896 [debug] [Thread-5  ]: Began executing node model.billy_bulky.customers
+[0m12:57:46.827152 [debug] [Thread-1  ]: Began executing node model.billy_bulky.products
+[0m12:57:46.833817 [debug] [Thread-2  ]: Timing info for model.billy_bulky.sales (compile): 12:57:46.817249 => 12:57:46.833511
+[0m12:57:46.834484 [debug] [Thread-5  ]: Writing runtime sql for node "model.billy_bulky.customers"
+[0m12:57:46.836650 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.products"
+[0m12:57:46.837098 [debug] [Thread-2  ]: Began executing node model.billy_bulky.sales
+[0m12:57:46.838990 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.sales"
+[0m12:57:46.841020 [debug] [Thread-5  ]: Using snowflake connection "model.billy_bulky.customers"
+[0m12:57:46.841354 [debug] [Thread-5  ]: On model.billy_bulky.customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.customers"} */
+create or replace transient table E_COMMERCE.marts.customers
+         as
+        (WITH  __dbt__cte__int_customers_segmentation as (
+WITH customers AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__customers
+)
+
+, orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, order_aggregates AS (
+    SELECT
+        o.CUSTOMER_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS frequency
+        , SUM(o.QUANTITY * p.PRICE) AS monetary
+        , AVG(o.QUANTITY * p.PRICE) AS average_order_value
+        , MAX(o.ORDER_DATE) AS last_purchase_date
+        , COUNT(CASE WHEN o.STATUS = 'cancelled' THEN 1 END) AS cancelled_orders
+        , COUNT(*) AS total_orders
+    FROM orders o
+    JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    GROUP BY o.CUSTOMER_ID
+)
+
+, customer_tenure AS (
+    SELECT
+        CUSTOMER_ID
+        , JOIN_DATE
+        , CURRENT_DATE - JOIN_DATE AS tenure
+    FROM customers
+)
+
+, customer_recency AS (
+    SELECT
+        CUSTOMER_ID
+        , CURRENT_DATE - last_purchase_date AS recency
+    FROM order_aggregates
+)
+
+, final AS (
+    SELECT
+        c.CUSTOMER_ID
+        , c.FIRST_NAME
+        , c.LAST_NAME
+        , c.EMAIL
+        , c.JOIN_DATE
+        , c.COUNTRY
+        , o.frequency
+        , o.monetary
+        , o.average_order_value
+        , o.cancelled_orders
+        , o.total_orders
+        , CASE 
+            WHEN o.total_orders > 0 THEN ROUND((o.cancelled_orders::FLOAT / o.total_orders) * 100, 2) 
+            ELSE 0 
+          END AS cancellation_rate
+        , r.recency
+        , t.tenure
+    FROM customer_tenure t
+    JOIN customers c ON t.CUSTOMER_ID = c.CUSTOMER_ID
+    JOIN order_aggregates o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    JOIN customer_recency r ON c.CUSTOMER_ID = r.CUSTOMER_ID
+)
+
+SELECT * FROM final
+), source AS (
+    SELECT
+        icp.CUSTOMER_ID
+        , icp.FIRST_NAME
+        , icp.LAST_NAME
+        , icp.EMAIL
+        , icp.JOIN_DATE
+        , icp.COUNTRY
+        , icp.frequency AS total_orders
+        , icp.monetary AS total_spent
+        , icp.recency
+        , icp.tenure
+    FROM __dbt__cte__int_customers_segmentation icp
+)
+
+, final AS (
+SELECT
+    s.CUSTOMER_ID
+    , s.FIRST_NAME
+    , s.LAST_NAME
+    , s.EMAIL
+    , s.JOIN_DATE
+    , s.COUNTRY
+    , s.total_orders
+    , s.total_spent
+    , s.recency
+    , s.tenure
+    , CASE
+        WHEN total_spent > 1000 THEN 'VIP'
+        ELSE 'Regular'
+    END AS customer_segment
+FROM source s
+)
+
+SELECT * FROM final
+        );
+[0m12:57:46.841665 [debug] [Thread-5  ]: Opening a new connection, currently in state closed
+[0m12:57:46.843089 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.products"
+[0m12:57:46.845372 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.sales"
+[0m12:57:46.845673 [debug] [Thread-1  ]: On model.billy_bulky.products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.products"} */
+create or replace transient table E_COMMERCE.marts.products
+         as
+        (WITH  __dbt__cte__int_products_performance as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, product_sales AS (
+    SELECT
+        o.PRODUCT_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS total_sales
+        , SUM(o.QUANTITY) AS total_units_sold
+        , SUM(o.QUANTITY * p.PRICE) AS total_sales_value
+    FROM orders o
+    INNER JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY o.PRODUCT_ID
+)
+
+, product_averages AS (
+    SELECT
+        PRODUCT_ID
+        , (total_sales_value / NULLIF(total_units_sold, 0)) AS average_sale_price
+    FROM product_sales
+)
+
+, product_stock_turnover AS (
+    SELECT
+        p.PRODUCT_ID
+        , p.STOCK_LEVEL
+        , (total_units_sold / NULLIF(p.STOCK_LEVEL, 0)) AS turnover_rate
+    FROM product_sales ps
+    INNER JOIN products p ON ps.PRODUCT_ID = p.PRODUCT_ID
+)
+
+, final AS (
+    SELECT
+    p.PRODUCT_ID
+    , p.NAME
+    , p.CATEGORY
+    , p.PRICE
+    , pa.average_sale_price
+    , ps.total_sales
+    , ps.total_units_sold
+    , ps.total_sales_value
+    , pst.turnover_rate
+    , p.STOCK_LEVEL
+FROM products p
+LEFT JOIN product_sales ps ON p.PRODUCT_ID = ps.PRODUCT_ID
+LEFT JOIN product_averages pa ON p.PRODUCT_ID = pa.PRODUCT_ID
+LEFT JOIN product_stock_turnover pst ON p.PRODUCT_ID = pst.PRODUCT_ID
+)
+
+SELECT * FROM final
+), final AS (
+    SELECT
+        pp.PRODUCT_ID
+        , pp.NAME
+        , pp.CATEGORY
+        , pp.PRICE
+        , pp.average_sale_price
+        , pp.total_sales
+        , pp.total_units_sold
+        , pp.total_sales_value
+        , pp.turnover_rate
+        , pp.STOCK_LEVEL
+    FROM __dbt__cte__int_products_performance pp
+)
+
+SELECT * FROM final
+        );
+[0m12:57:46.846298 [debug] [Thread-2  ]: On model.billy_bulky.sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.sales"} */
+create or replace transient table E_COMMERCE.marts.sales
+         as
+        (WITH  __dbt__cte__int_sales_trend as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, daily_sales AS (
+    SELECT
+        DATE(ORDER_DATE) AS sale_date
+        , COUNT(DISTINCT ORDER_ID) AS total_orders
+        , SUM(QUANTITY) AS total_units_sold
+        , SUM(QUANTITY * PRICE) AS total_sales_value
+    FROM orders AS o
+    JOIN products AS p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY sale_date
+)
+
+, weekly_sales AS (
+    SELECT
+        DATE_TRUNC('week', sale_date) AS sale_week
+        , SUM(total_orders) AS weekly_orders
+        , SUM(total_units_sold) AS weekly_units_sold
+        , SUM(total_sales_value) AS weekly_sales_value
+    FROM daily_sales
+    GROUP BY sale_week
+)
+
+, monthly_sales AS (
+    SELECT
+        DATE_TRUNC('month', sale_date) AS sale_month
+        , SUM(total_orders) AS monthly_orders
+        , SUM(total_units_sold) AS monthly_units_sold
+        , SUM(total_sales_value) AS monthly_sales_value
+    FROM daily_sales
+    GROUP BY sale_month
+)
+
+, yearly_sales AS (
+    SELECT
+        DATE_TRUNC('year', sale_date) AS sale_year
+        , SUM(total_orders) AS yearly_orders
+        , SUM(total_units_sold) AS yearly_units_sold
+        , SUM(total_sales_value) AS yearly_sales_value
+    FROM daily_sales
+    GROUP BY sale_year
+)
+
+SELECT
+    d.sale_date
+    , d.total_orders AS daily_orders
+    , d.total_units_sold AS daily_units_sold
+    , d.total_sales_value AS daily_sales_value
+    , w.weekly_orders
+    , w.weekly_units_sold
+    , w.weekly_sales_value
+    , m.monthly_orders
+    , m.monthly_units_sold
+    , m.monthly_sales_value
+    , y.yearly_orders
+    , y.yearly_units_sold
+    , y.yearly_sales_value
+FROM daily_sales d
+LEFT JOIN weekly_sales w ON DATE_TRUNC('week', d.sale_date) = w.sale_week
+LEFT JOIN monthly_sales m ON DATE_TRUNC('month', d.sale_date) = m.sale_month
+LEFT JOIN yearly_sales y ON DATE_TRUNC('year', d.sale_date) = y.sale_year
+), enriched_orders AS (
+    SELECT
+        o.ORDER_ID
+        , o.CUSTOMER_ID
+        , o.PRODUCT_ID
+        , o.QUANTITY
+        , o.ORDER_DATE
+        , o.STATUS
+        , p.CATEGORY
+        , p.PRICE AS unit_price
+        , (o.QUANTITY * p.PRICE) AS total_price
+        , c.COUNTRY
+    FROM E_COMMERCE.staging.staging_shopify__orders o
+    JOIN E_COMMERCE.staging.staging_shopify__products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    JOIN E_COMMERCE.staging.staging_shopify__customers c ON o.CUSTOMER_ID = c.CUSTOMER_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+)
+
+SELECT
+    eo.ORDER_ID
+    , eo.CUSTOMER_ID
+    , eo.PRODUCT_ID
+    , eo.QUANTITY
+    , eo.ORDER_DATE
+    , eo.STATUS
+    , eo.CATEGORY
+    , eo.unit_price
+    , eo.total_price
+    , eo.COUNTRY
+    , sa.daily_orders
+    , sa.daily_units_sold
+    , sa.daily_sales_value
+FROM enriched_orders eo
+LEFT JOIN __dbt__cte__int_sales_trend sa ON DATE(eo.ORDER_DATE) = sa.sale_date
+        );
+[0m12:57:46.846900 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:57:46.847151 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m12:57:47.951938 [debug] [Thread-7  ]: Snowflake adapter: Snowflake query id: 01b07a0d-0001-82f5-0004-d8be000190ee
+[0m12:57:47.952313 [debug] [Thread-7  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+[0m12:57:47.952706 [debug] [Thread-7  ]: Timing info for model.billy_bulky.int_products_inventory (execute): 12:57:46.763105 => 12:57:47.952548
+[0m12:57:47.952994 [debug] [Thread-7  ]: On model.billy_bulky.int_products_inventory: Close
+[0m12:57:48.436845 [debug] [Thread-7  ]: Database Error in model int_products_inventory (models/intermediate/products/int_products_inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products_inventory.sql
+[0m12:57:48.437860 [debug] [Thread-7  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14549fc40>]}
+[0m12:57:48.438764 [error] [Thread-7  ]: 5 of 8 ERROR creating sql incremental model intermediate.int_products_inventory  [[31mERROR[0m in 1.71s]
+[0m12:57:48.439657 [debug] [Thread-7  ]: Finished running node model.billy_bulky.int_products_inventory
+[0m12:57:49.175732 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:57:49.182390 [debug] [Thread-5  ]: Timing info for model.billy_bulky.customers (execute): 12:57:46.827323 => 12:57:49.181921
+[0m12:57:49.183230 [debug] [Thread-5  ]: On model.billy_bulky.customers: Close
+[0m12:57:49.435502 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:57:49.441168 [debug] [Thread-1  ]: Timing info for model.billy_bulky.products (execute): 12:57:46.834957 => 12:57:49.440789
+[0m12:57:49.441929 [debug] [Thread-1  ]: On model.billy_bulky.products: Close
+[0m12:57:49.517095 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:57:49.524490 [debug] [Thread-2  ]: Timing info for model.billy_bulky.sales (execute): 12:57:46.837390 => 12:57:49.524236
+[0m12:57:49.524969 [debug] [Thread-2  ]: On model.billy_bulky.sales: Close
+[0m12:57:49.534167 [debug] [Thread-5  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1454ba490>]}
+[0m12:57:49.534954 [info ] [Thread-5  ]: 6 of 8 OK created sql table model marts.customers .............................. [[32mSUCCESS 1[0m in 2.73s]
+[0m12:57:49.535686 [debug] [Thread-5  ]: Finished running node model.billy_bulky.customers
+[0m12:57:49.797545 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14503b760>]}
+[0m12:57:49.799449 [info ] [Thread-1  ]: 7 of 8 OK created sql table model marts.products ............................... [[32mSUCCESS 1[0m in 2.99s]
+[0m12:57:49.800949 [debug] [Thread-1  ]: Finished running node model.billy_bulky.products
+[0m12:57:49.880748 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b396f709-4e16-47a9-89de-d6c0a8e64267', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x145459ca0>]}
+[0m12:57:49.882164 [info ] [Thread-2  ]: 8 of 8 OK created sql table model marts.sales .................................. [[32mSUCCESS 1[0m in 3.08s]
+[0m12:57:49.883194 [debug] [Thread-2  ]: Finished running node model.billy_bulky.sales
+[0m12:57:49.886119 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:57:49.886714 [debug] [MainThread]: Connection 'model.billy_bulky.products' was properly closed.
+[0m12:57:49.887215 [debug] [MainThread]: Connection 'model.billy_bulky.sales' was properly closed.
+[0m12:57:49.887705 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__orders' was properly closed.
+[0m12:57:49.888185 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__products' was properly closed.
+[0m12:57:49.888655 [debug] [MainThread]: Connection 'model.billy_bulky.customers' was properly closed.
+[0m12:57:49.889117 [debug] [MainThread]: Connection 'model.billy_bulky.int_customers_segmentation' was properly closed.
+[0m12:57:49.889583 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_performance' was properly closed.
+[0m12:57:49.890045 [debug] [MainThread]: Connection 'model.billy_bulky.int_sales_trend' was properly closed.
+[0m12:57:49.890520 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_inventory' was properly closed.
+[0m12:57:49.891199 [info ] [MainThread]: 
+[0m12:57:49.891749 [info ] [MainThread]: Finished running 4 view models, 1 incremental model, 3 table models in 0 hours 0 minutes and 8.70 seconds (8.70s).
+[0m12:57:49.893877 [debug] [MainThread]: Command end result
+[0m12:57:49.911082 [info ] [MainThread]: 
+[0m12:57:49.911614 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:57:49.912007 [info ] [MainThread]: 
+[0m12:57:49.912469 [error] [MainThread]:   Database Error in model int_products_inventory (models/intermediate/products/int_products_inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products_inventory.sql
+[0m12:57:49.912984 [info ] [MainThread]: 
+[0m12:57:49.913384 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+[0m12:57:49.915846 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.841323, "process_user_time": 5.616867, "process_kernel_time": 0.410715, "process_mem_max_rss": "222052352", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:57:49.916433 [debug] [MainThread]: Command `dbt run` failed at 12:57:49.916303 after 9.84 seconds
+[0m12:57:49.916858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d316d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1332bc3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14552cca0>]}
+[0m12:57:49.917277 [debug] [MainThread]: Flushing usage events
+[0m12:58:41.162540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032716d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d629d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ac0400>]}
+
+
+============================== 12:58:41.165202 | cafa500d-dc40-4088-ba52-da08e5714ef2 ==============================
+[0m12:58:41.165202 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:58:41.165550 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bitlevi/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/bitlevi/Documents/billy_bulky_ecommerce/billy_bulky_ecommerce/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m12:58:41.989000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d629d0>]}
+[0m12:58:42.036553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x131594c10>]}
+[0m12:58:42.037380 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:58:42.049895 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:58:42.060925 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m12:58:42.061264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13790acd0>]}
+[0m12:58:42.791385 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'orders' in the 'models' section of file 'models/staging/shopify/_shopify__schema.yml'
+[0m12:58:42.900985 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_sales' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m12:58:42.902804 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_customers' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m12:58:42.904046 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_products' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m12:58:42.988530 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_orders_order_id.fed79b3a6e' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.988884 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_order_id.cf6c17daed' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.989164 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_customer_id.c5f02694af' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.989416 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_product_id.3523c78a66' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.989642 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_quantity.0e6bb23b03' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.989861 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_order_date.6910a855fe' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.990077 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_status.8a27272c0a' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.990297 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.accepted_values_orders_status__cancelled__processing__delivered__shipped.fbff2d9925' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m12:58:42.990538 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_sales_order_id.825e23650b' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.990750 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_order_id.842b56ef2f' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.990956 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_customer_id.189ac71c42' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.991169 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_marts_sales_customer_id__customer_id__ref_customers_.74e21c3398' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.991379 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_product_id.12beecf4f2' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.991591 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_marts_sales_product_id__product_id__ref_products_.77e7665182' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.991800 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_quantity.ea8c580869' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.992006 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_order_date.90eaa9e7fe' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.992218 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_status.e9b4b90247' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.992424 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_category.a98218f68d' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.992633 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_unit_price.321f152a2a' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.992841 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_total_price.015724a7e6' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.993045 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_country.5f628b732c' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m12:58:42.993257 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_customers_customer_id.9c72620f57' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.993467 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_customer_id.fc7763eff9' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.993669 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_customers_email.6210d26820' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.993876 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_email.637d2131e6' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.994082 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_join_date.6378efd424' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.994291 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_total_orders.7cdc5122e5' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.994501 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_total_spent.d5343aecc7' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m12:58:42.994705 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_products_product_id.e96f554683' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.994912 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_product_id.9b354ae761' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.995118 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_name.f0d9c8d191' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.995326 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_category.1212ed3683' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.995532 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_price.d6207a2896' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.995742 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_total_units_sold.6822a804df' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:42.995948 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_total_sales_value.b0a2a654b3' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m12:58:43.023712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1635270d0>]}
+[0m12:58:43.037154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137906850>]}
+[0m12:58:43.037489 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 seed, 54 tests, 4 sources, 0 exposures, 0 metrics, 431 macros, 0 groups, 0 semantic models
+[0m12:58:43.037711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105adf400>]}
+[0m12:58:43.039323 [info ] [MainThread]: 
+[0m12:58:43.039814 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:58:43.040677 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:58:43.048566 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:58:43.048793 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:58:43.049226 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:58:43.049440 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:58:43.049881 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m12:58:43.051529 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:58:43.054358 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m12:58:43.054665 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:58:43.055180 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m12:58:43.055393 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:58:43.055582 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:58:44.434525 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:58:44.435782 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:58:44.437965 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:58:44.439840 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:58:44.501877 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m12:58:44.504085 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m12:58:44.898018 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_intermediate)
+[0m12:58:44.899473 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_marts)
+[0m12:58:44.902059 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_staging)
+[0m12:58:44.909586 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_snapshots'
+[0m12:58:44.920574 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_marts"
+[0m12:58:44.921421 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_PUBLIC'
+[0m12:58:44.927302 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_intermediate"
+[0m12:58:44.929481 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_staging"
+[0m12:58:44.931845 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_snapshots"
+[0m12:58:44.932241 [debug] [ThreadPool]: On list_E_COMMERCE_marts: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_marts"} */
+show terse objects in E_COMMERCE.marts limit 10000
+[0m12:58:44.934659 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_PUBLIC"
+[0m12:58:44.935041 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_intermediate"} */
+show terse objects in E_COMMERCE.intermediate limit 10000
+[0m12:58:44.935403 [debug] [ThreadPool]: On list_E_COMMERCE_staging: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_staging"} */
+show terse objects in E_COMMERCE.staging limit 10000
+[0m12:58:44.935748 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_snapshots"} */
+show terse objects in E_COMMERCE.snapshots limit 10000
+[0m12:58:44.936094 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:58:44.936426 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_PUBLIC"} */
+show terse objects in E_COMMERCE.PUBLIC limit 10000
+[0m12:58:44.936735 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:58:44.937009 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:58:44.937271 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:58:44.937807 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:58:46.227072 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:58:46.240663 [debug] [ThreadPool]: On list_E_COMMERCE_intermediate: Close
+[0m12:58:46.241973 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m12:58:46.244982 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:58:46.247026 [debug] [ThreadPool]: On list_E_COMMERCE_staging: Close
+[0m12:58:46.248454 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:58:46.250753 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: Close
+[0m12:58:46.258977 [debug] [ThreadPool]: On list_E_COMMERCE_marts: Close
+[0m12:58:46.298664 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b07a0e-0001-815a-0004-d8be00018252
+[0m12:58:46.298978 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m12:58:46.299308 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m12:58:46.299538 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m12:58:46.299798 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: Close
+[0m12:58:46.655512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163580220>]}
+[0m12:58:46.656925 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m12:58:46.657544 [info ] [MainThread]: 
+[0m12:58:46.662131 [debug] [Thread-1  ]: Began running node model.billy_bulky.staging__shopify__products_history
+[0m12:58:46.662970 [debug] [Thread-2  ]: Began running node model.billy_bulky.staging_shopify__customers
+[0m12:58:46.663630 [debug] [Thread-3  ]: Began running node model.billy_bulky.staging_shopify__orders
+[0m12:58:46.664350 [info ] [Thread-1  ]: 1 of 11 START sql view model staging.staging__shopify__products_history ........ [RUN]
+[0m12:58:46.665047 [info ] [Thread-2  ]: 2 of 11 START sql view model staging.staging_shopify__customers ................ [RUN]
+[0m12:58:46.666821 [debug] [Thread-4  ]: Began running node model.billy_bulky.staging_shopify__products
+[0m12:58:46.665759 [info ] [Thread-3  ]: 3 of 11 START sql view model staging.staging_shopify__orders ................... [RUN]
+[0m12:58:46.668704 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_intermediate, now model.billy_bulky.staging__shopify__products_history)
+[0m12:58:46.669698 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_marts, now model.billy_bulky.staging_shopify__customers)
+[0m12:58:46.670448 [info ] [Thread-4  ]: 4 of 11 START sql view model staging.staging_shopify__products ................. [RUN]
+[0m12:58:46.671428 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_staging, now model.billy_bulky.staging_shopify__orders)
+[0m12:58:46.672010 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.staging__shopify__products_history
+[0m12:58:46.672527 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.staging_shopify__customers
+[0m12:58:46.673381 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_snapshots, now model.billy_bulky.staging_shopify__products)
+[0m12:58:46.673902 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.staging_shopify__orders
+[0m12:58:46.684223 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:58:46.688045 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__customers"
+[0m12:58:46.688556 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.staging_shopify__products
+[0m12:58:46.691627 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__orders"
+[0m12:58:46.695020 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__products"
+[0m12:58:46.695740 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (compile): 12:58:46.674234 => 12:58:46.695465
+[0m12:58:46.696225 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (compile): 12:58:46.684570 => 12:58:46.696020
+[0m12:58:46.696642 [debug] [Thread-1  ]: Began executing node model.billy_bulky.staging__shopify__products_history
+[0m12:58:46.697070 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (compile): 12:58:46.688819 => 12:58:46.696882
+[0m12:58:46.697421 [debug] [Thread-2  ]: Began executing node model.billy_bulky.staging_shopify__customers
+[0m12:58:46.703837 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (compile): 12:58:46.692099 => 12:58:46.703547
+[0m12:58:46.717696 [debug] [Thread-3  ]: Began executing node model.billy_bulky.staging_shopify__orders
+[0m12:58:46.722497 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.staging__shopify__products_history"
+[0m12:58:46.725922 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__customers"
+[0m12:58:46.726210 [debug] [Thread-4  ]: Began executing node model.billy_bulky.staging_shopify__products
+[0m12:58:46.728465 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__orders"
+[0m12:58:46.730836 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__products"
+[0m12:58:46.731558 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.staging_shopify__orders"
+[0m12:58:46.731843 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__orders"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__orders
+  
+   as (
+    WITH orders AS (
+    SELECT * FROM SHOPIFY.PUBLIC.orders
+)
+
+SELECT
+    ORDER_ID
+    , CUSTOMER_ID
+    , PRODUCT_ID
+    , QUANTITY
+    , ORDER_DATE
+    , STATUS
+FROM orders
+  );
+[0m12:58:46.732442 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.staging__shopify__products_history"
+[0m12:58:46.732912 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.staging_shopify__customers"
+[0m12:58:46.733148 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m12:58:46.733582 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.staging_shopify__products"
+[0m12:58:46.733862 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging__shopify__products_history"} */
+create or replace   view E_COMMERCE.staging.staging__shopify__products_history
+  
+   as (
+    WITH products AS (
+    SELECT * FROM E_COMMERCE.SNAPSHOTS.products_snapshot
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+    , DBT_SCD_ID
+    , DBT_UPDATED_AT
+    , DBT_VALID_FROM
+    , DBT_VALID_TO
+FROM products
+  );
+[0m12:58:46.734148 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__customers"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__customers
+  
+   as (
+    WITH customers AS (
+    SELECT * FROM SHOPIFY.PUBLIC.customers
+)
+
+SELECT
+    CUSTOMER_ID
+    , FIRST_NAME
+    , LAST_NAME
+    , EMAIL
+    , JOIN_DATE
+    , COUNTRY
+FROM customers
+  );
+[0m12:58:46.734897 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__products"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__products
+  
+   as (
+    WITH products AS (
+    SELECT * FROM SHOPIFY.PUBLIC.products
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+FROM products
+  );
+[0m12:58:46.735445 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:58:46.735730 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m12:58:46.735984 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m12:58:47.908777 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:58:47.941290 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (execute): 12:58:46.728795 => 12:58:47.941026
+[0m12:58:47.941824 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: Close
+[0m12:58:48.168279 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:58:48.175403 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (execute): 12:58:46.697660 => 12:58:48.174856
+[0m12:58:48.176265 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: Close
+[0m12:58:48.191843 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:58:48.195974 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (execute): 12:58:46.722728 => 12:58:48.195598
+[0m12:58:48.196669 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: Close
+[0m12:58:48.551952 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1633d9a60>]}
+[0m12:58:48.553635 [info ] [Thread-1  ]: 1 of 11 OK created sql view model staging.staging__shopify__products_history ... [[32mSUCCESS 1[0m in 1.88s]
+[0m12:58:48.554735 [debug] [Thread-1  ]: Finished running node model.billy_bulky.staging__shopify__products_history
+[0m12:58:48.611240 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137eb4670>]}
+[0m12:58:48.612465 [info ] [Thread-2  ]: 2 of 11 OK created sql view model staging.staging_shopify__customers ........... [[32mSUCCESS 1[0m in 1.94s]
+[0m12:58:48.613499 [debug] [Thread-2  ]: Finished running node model.billy_bulky.staging_shopify__customers
+[0m12:58:48.857292 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163fbc2b0>]}
+[0m12:58:48.859297 [info ] [Thread-4  ]: 4 of 11 OK created sql view model staging.staging_shopify__products ............ [[32mSUCCESS 1[0m in 2.18s]
+[0m12:58:48.860561 [debug] [Thread-4  ]: Finished running node model.billy_bulky.staging_shopify__products
+[0m12:58:48.861584 [debug] [Thread-6  ]: Began running node model.billy_bulky.int_products_inventory
+[0m12:58:48.862395 [info ] [Thread-6  ]: 5 of 11 START sql incremental model intermediate.int_products_inventory ........ [RUN]
+[0m12:58:48.863833 [debug] [Thread-6  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_inventory'
+[0m12:58:48.864504 [debug] [Thread-6  ]: Began compiling node model.billy_bulky.int_products_inventory
+[0m12:58:48.872257 [debug] [Thread-6  ]: Writing injected SQL for node "model.billy_bulky.int_products_inventory"
+[0m12:58:48.874096 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:58:48.877762 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (execute): 12:58:46.726390 => 12:58:48.877430
+[0m12:58:48.878403 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: Close
+[0m12:58:48.879067 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_products_inventory (compile): 12:58:48.864913 => 12:58:48.878740
+[0m12:58:48.881116 [debug] [Thread-6  ]: Began executing node model.billy_bulky.int_products_inventory
+[0m12:58:48.928087 [debug] [Thread-6  ]: Writing runtime sql for node "model.billy_bulky.int_products_inventory"
+[0m12:58:48.929360 [debug] [Thread-6  ]: Using snowflake connection "model.billy_bulky.int_products_inventory"
+[0m12:58:48.929693 [debug] [Thread-6  ]: On model.billy_bulky.int_products_inventory: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_products_inventory"} */
+create or replace transient table E_COMMERCE.intermediate.int_products_inventory
+         as
+        (
+
+WITH inventory_data AS (
+    SELECT
+        DATE_TRUNC('day', CURRENT_TIMESTAMP) AS snapshot_date
+        , p.PRODUCT_ID
+        , p.STOCK_LEVEL
+    FROM E_COMMERCE.staging.staging_shopify__products p
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM E_COMMERCE.intermediate.int_products_inventory
+        WHERE snapshot_date = DATE_TRUNC('day', CURRENT_TIMESTAMP)
+          AND PRODUCT_ID = p.PRODUCT_ID
+    )
+)
+
+SELECT
+    snapshot_date
+    , PRODUCT_ID
+    , STOCK_LEVEL
+FROM inventory_data
+
+
+        );
+[0m12:58:48.929992 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m12:58:49.282595 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1622c49d0>]}
+[0m12:58:49.283427 [info ] [Thread-3  ]: 3 of 11 OK created sql view model staging.staging_shopify__orders .............. [[32mSUCCESS 1[0m in 2.61s]
+[0m12:58:49.284084 [debug] [Thread-3  ]: Finished running node model.billy_bulky.staging_shopify__orders
+[0m12:58:49.284771 [debug] [Thread-8  ]: Began running node model.billy_bulky.int_customers_segmentation
+[0m12:58:49.285256 [debug] [Thread-9  ]: Began running node model.billy_bulky.int_products_performance
+[0m12:58:49.285730 [info ] [Thread-8  ]: 6 of 11 START sql table model intermediate.int_customers_segmentation .......... [RUN]
+[0m12:58:49.286195 [debug] [Thread-10 ]: Began running node model.billy_bulky.int_sales_trend
+[0m12:58:49.286644 [info ] [Thread-9  ]: 7 of 11 START sql table model intermediate.int_products_performance ............ [RUN]
+[0m12:58:49.287439 [debug] [Thread-8  ]: Acquiring new snowflake connection 'model.billy_bulky.int_customers_segmentation'
+[0m12:58:49.287859 [info ] [Thread-10 ]: 8 of 11 START sql table model intermediate.int_sales_trend ..................... [RUN]
+[0m12:58:49.288609 [debug] [Thread-9  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_performance'
+[0m12:58:49.289053 [debug] [Thread-8  ]: Began compiling node model.billy_bulky.int_customers_segmentation
+[0m12:58:49.289734 [debug] [Thread-10 ]: Acquiring new snowflake connection 'model.billy_bulky.int_sales_trend'
+[0m12:58:49.290102 [debug] [Thread-9  ]: Began compiling node model.billy_bulky.int_products_performance
+[0m12:58:49.294172 [debug] [Thread-8  ]: Writing injected SQL for node "model.billy_bulky.int_customers_segmentation"
+[0m12:58:49.294598 [debug] [Thread-10 ]: Began compiling node model.billy_bulky.int_sales_trend
+[0m12:58:49.297526 [debug] [Thread-9  ]: Writing injected SQL for node "model.billy_bulky.int_products_performance"
+[0m12:58:49.300480 [debug] [Thread-10 ]: Writing injected SQL for node "model.billy_bulky.int_sales_trend"
+[0m12:58:49.301207 [debug] [Thread-9  ]: Timing info for model.billy_bulky.int_products_performance (compile): 12:58:49.294836 => 12:58:49.300996
+[0m12:58:49.301617 [debug] [Thread-8  ]: Timing info for model.billy_bulky.int_customers_segmentation (compile): 12:58:49.290354 => 12:58:49.301425
+[0m12:58:49.301938 [debug] [Thread-9  ]: Began executing node model.billy_bulky.int_products_performance
+[0m12:58:49.302479 [debug] [Thread-8  ]: Began executing node model.billy_bulky.int_customers_segmentation
+[0m12:58:49.309239 [debug] [Thread-10 ]: Timing info for model.billy_bulky.int_sales_trend (compile): 12:58:49.297813 => 12:58:49.309054
+[0m12:58:49.312276 [debug] [Thread-9  ]: Writing runtime sql for node "model.billy_bulky.int_products_performance"
+[0m12:58:49.314454 [debug] [Thread-8  ]: Writing runtime sql for node "model.billy_bulky.int_customers_segmentation"
+[0m12:58:49.314764 [debug] [Thread-10 ]: Began executing node model.billy_bulky.int_sales_trend
+[0m12:58:49.316970 [debug] [Thread-10 ]: Writing runtime sql for node "model.billy_bulky.int_sales_trend"
+[0m12:58:49.319208 [debug] [Thread-8  ]: Using snowflake connection "model.billy_bulky.int_customers_segmentation"
+[0m12:58:49.320713 [debug] [Thread-9  ]: Using snowflake connection "model.billy_bulky.int_products_performance"
+[0m12:58:49.321084 [debug] [Thread-8  ]: On model.billy_bulky.int_customers_segmentation: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_customers_segmentation"} */
+create or replace transient table E_COMMERCE.intermediate.int_customers_segmentation
+         as
+        (WITH customers AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__customers
+)
+
+, orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, order_aggregates AS (
+    SELECT
+        o.CUSTOMER_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS frequency
+        , SUM(o.QUANTITY * p.PRICE) AS monetary
+        , AVG(o.QUANTITY * p.PRICE) AS average_order_value
+        , MAX(o.ORDER_DATE) AS last_purchase_date
+        , COUNT(CASE WHEN o.STATUS = 'cancelled' THEN 1 END) AS cancelled_orders
+        , COUNT(*) AS total_orders
+    FROM orders o
+    JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    GROUP BY o.CUSTOMER_ID
+)
+
+, customer_tenure AS (
+    SELECT
+        CUSTOMER_ID
+        , JOIN_DATE
+        , CURRENT_DATE - JOIN_DATE AS tenure
+    FROM customers
+)
+
+, customer_recency AS (
+    SELECT
+        CUSTOMER_ID
+        , CURRENT_DATE - last_purchase_date AS recency
+    FROM order_aggregates
+)
+
+, final AS (
+    SELECT
+        c.CUSTOMER_ID
+        , c.FIRST_NAME
+        , c.LAST_NAME
+        , c.EMAIL
+        , c.JOIN_DATE
+        , c.COUNTRY
+        , o.frequency
+        , o.monetary
+        , o.average_order_value
+        , o.cancelled_orders
+        , o.total_orders
+        , CASE 
+            WHEN o.total_orders > 0 THEN ROUND((o.cancelled_orders::FLOAT / o.total_orders) * 100, 2) 
+            ELSE 0 
+          END AS cancellation_rate
+        , r.recency
+        , t.tenure
+    FROM customer_tenure t
+    JOIN customers c ON t.CUSTOMER_ID = c.CUSTOMER_ID
+    JOIN order_aggregates o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    JOIN customer_recency r ON c.CUSTOMER_ID = r.CUSTOMER_ID
+)
+
+SELECT * FROM final
+        );
+[0m12:58:49.321539 [debug] [Thread-9  ]: On model.billy_bulky.int_products_performance: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_products_performance"} */
+create or replace transient table E_COMMERCE.intermediate.int_products_performance
+         as
+        (WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, product_sales AS (
+    SELECT
+        o.PRODUCT_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS total_sales
+        , SUM(o.QUANTITY) AS total_units_sold
+        , SUM(o.QUANTITY * p.PRICE) AS total_sales_value
+    FROM orders o
+    INNER JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY o.PRODUCT_ID
+)
+
+, product_averages AS (
+    SELECT
+        PRODUCT_ID
+        , (total_sales_value / NULLIF(total_units_sold, 0)) AS average_sale_price
+    FROM product_sales
+)
+
+, product_stock_turnover AS (
+    SELECT
+        p.PRODUCT_ID
+        , p.STOCK_LEVEL
+        , (total_units_sold / NULLIF(p.STOCK_LEVEL, 0)) AS turnover_rate
+    FROM product_sales ps
+    INNER JOIN products p ON ps.PRODUCT_ID = p.PRODUCT_ID
+)
+
+, final AS (
+    SELECT
+    p.PRODUCT_ID
+    , p.NAME
+    , p.CATEGORY
+    , p.PRICE
+    , pa.average_sale_price
+    , ps.total_sales
+    , ps.total_units_sold
+    , ps.total_sales_value
+    , pst.turnover_rate
+    , p.STOCK_LEVEL
+FROM products p
+LEFT JOIN product_sales ps ON p.PRODUCT_ID = ps.PRODUCT_ID
+LEFT JOIN product_averages pa ON p.PRODUCT_ID = pa.PRODUCT_ID
+LEFT JOIN product_stock_turnover pst ON p.PRODUCT_ID = pst.PRODUCT_ID
+)
+
+SELECT * FROM final
+        );
+[0m12:58:49.323403 [debug] [Thread-10 ]: Using snowflake connection "model.billy_bulky.int_sales_trend"
+[0m12:58:49.323669 [debug] [Thread-8  ]: Opening a new connection, currently in state init
+[0m12:58:49.323911 [debug] [Thread-9  ]: Opening a new connection, currently in state init
+[0m12:58:49.324269 [debug] [Thread-10 ]: On model.billy_bulky.int_sales_trend: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.int_sales_trend"} */
+create or replace transient table E_COMMERCE.intermediate.int_sales_trend
+         as
+        (WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, daily_sales AS (
+    SELECT
+        DATE(ORDER_DATE) AS sale_date
+        , COUNT(DISTINCT ORDER_ID) AS total_orders
+        , SUM(QUANTITY) AS total_units_sold
+        , SUM(QUANTITY * PRICE) AS total_sales_value
+    FROM orders AS o
+    JOIN products AS p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY sale_date
+)
+
+, weekly_sales AS (
+    SELECT
+        DATE_TRUNC('week', sale_date) AS sale_week
+        , SUM(total_orders) AS weekly_orders
+        , SUM(total_units_sold) AS weekly_units_sold
+        , SUM(total_sales_value) AS weekly_sales_value
+    FROM daily_sales
+    GROUP BY sale_week
+)
+
+, monthly_sales AS (
+    SELECT
+        DATE_TRUNC('month', sale_date) AS sale_month
+        , SUM(total_orders) AS monthly_orders
+        , SUM(total_units_sold) AS monthly_units_sold
+        , SUM(total_sales_value) AS monthly_sales_value
+    FROM daily_sales
+    GROUP BY sale_month
+)
+
+, yearly_sales AS (
+    SELECT
+        DATE_TRUNC('year', sale_date) AS sale_year
+        , SUM(total_orders) AS yearly_orders
+        , SUM(total_units_sold) AS yearly_units_sold
+        , SUM(total_sales_value) AS yearly_sales_value
+    FROM daily_sales
+    GROUP BY sale_year
+)
+
+SELECT
+    d.sale_date
+    , d.total_orders AS daily_orders
+    , d.total_units_sold AS daily_units_sold
+    , d.total_sales_value AS daily_sales_value
+    , w.weekly_orders
+    , w.weekly_units_sold
+    , w.weekly_sales_value
+    , m.monthly_orders
+    , m.monthly_units_sold
+    , m.monthly_sales_value
+    , y.yearly_orders
+    , y.yearly_units_sold
+    , y.yearly_sales_value
+FROM daily_sales d
+LEFT JOIN weekly_sales w ON DATE_TRUNC('week', d.sale_date) = w.sale_week
+LEFT JOIN monthly_sales m ON DATE_TRUNC('month', d.sale_date) = m.sale_month
+LEFT JOIN yearly_sales y ON DATE_TRUNC('year', d.sale_date) = y.sale_year
+        );
+[0m12:58:49.325461 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m12:58:49.937409 [debug] [Thread-6  ]: Snowflake adapter: Snowflake query id: 01b07a0e-0001-8184-0004-d8be000105c2
+[0m12:58:49.937874 [debug] [Thread-6  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+[0m12:58:49.938330 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_products_inventory (execute): 12:58:48.881503 => 12:58:49.938144
+[0m12:58:49.938665 [debug] [Thread-6  ]: On model.billy_bulky.int_products_inventory: Close
+[0m12:58:50.410723 [debug] [Thread-6  ]: Database Error in model int_products_inventory (models/intermediate/products/int_products_inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products_inventory.sql
+[0m12:58:50.411724 [debug] [Thread-6  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16406f100>]}
+[0m12:58:50.412601 [error] [Thread-6  ]: 5 of 11 ERROR creating sql incremental model intermediate.int_products_inventory  [[31mERROR[0m in 1.55s]
+[0m12:58:50.413490 [debug] [Thread-6  ]: Finished running node model.billy_bulky.int_products_inventory
+[0m12:58:51.722850 [debug] [Thread-8  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:58:51.729643 [debug] [Thread-8  ]: Timing info for model.billy_bulky.int_customers_segmentation (execute): 12:58:49.312472 => 12:58:51.729189
+[0m12:58:51.730518 [debug] [Thread-8  ]: On model.billy_bulky.int_customers_segmentation: Close
+[0m12:58:51.825685 [debug] [Thread-9  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:58:51.833673 [debug] [Thread-9  ]: Timing info for model.billy_bulky.int_products_performance (execute): 12:58:49.302775 => 12:58:51.833375
+[0m12:58:51.834253 [debug] [Thread-9  ]: On model.billy_bulky.int_products_performance: Close
+[0m12:58:51.839310 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:58:51.842025 [debug] [Thread-10 ]: Timing info for model.billy_bulky.int_sales_trend (execute): 12:58:49.315049 => 12:58:51.841766
+[0m12:58:51.842511 [debug] [Thread-10 ]: On model.billy_bulky.int_sales_trend: Close
+[0m12:58:52.098875 [debug] [Thread-8  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16401cc40>]}
+[0m12:58:52.100105 [info ] [Thread-8  ]: 6 of 11 OK created sql table model intermediate.int_customers_segmentation ..... [[32mSUCCESS 1[0m in 2.81s]
+[0m12:58:52.101147 [debug] [Thread-8  ]: Finished running node model.billy_bulky.int_customers_segmentation
+[0m12:58:52.102113 [debug] [Thread-1  ]: Began running node model.billy_bulky.customers
+[0m12:58:52.102885 [info ] [Thread-1  ]: 9 of 11 START sql table model marts.customers .................................. [RUN]
+[0m12:58:52.104127 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging__shopify__products_history, now model.billy_bulky.customers)
+[0m12:58:52.104682 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.customers
+[0m12:58:52.110884 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.customers"
+[0m12:58:52.112584 [debug] [Thread-1  ]: Timing info for model.billy_bulky.customers (compile): 12:58:52.105005 => 12:58:52.112249
+[0m12:58:52.113128 [debug] [Thread-1  ]: Began executing node model.billy_bulky.customers
+[0m12:58:52.116974 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.customers"
+[0m12:58:52.118873 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.customers"
+[0m12:58:52.119413 [debug] [Thread-1  ]: On model.billy_bulky.customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.customers"} */
+create or replace transient table E_COMMERCE.marts.customers
+         as
+        (WITH source AS (
+    SELECT
+        icp.CUSTOMER_ID
+        , icp.FIRST_NAME
+        , icp.LAST_NAME
+        , icp.EMAIL
+        , icp.JOIN_DATE
+        , icp.COUNTRY
+        , icp.frequency AS total_orders
+        , icp.monetary AS total_spent
+        , icp.recency
+        , icp.tenure
+    FROM E_COMMERCE.intermediate.int_customers_segmentation icp
+)
+
+, final AS (
+SELECT
+    s.CUSTOMER_ID
+    , s.FIRST_NAME
+    , s.LAST_NAME
+    , s.EMAIL
+    , s.JOIN_DATE
+    , s.COUNTRY
+    , s.total_orders
+    , s.total_spent
+    , s.recency
+    , s.tenure
+    , CASE
+        WHEN total_spent > 1000 THEN 'VIP'
+        ELSE 'Regular'
+    END AS customer_segment
+FROM source s
+)
+
+SELECT * FROM final
+        );
+[0m12:58:52.119910 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:58:52.176498 [debug] [Thread-9  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163fa0f70>]}
+[0m12:58:52.177487 [info ] [Thread-9  ]: 7 of 11 OK created sql table model intermediate.int_products_performance ....... [[32mSUCCESS 1[0m in 2.89s]
+[0m12:58:52.178331 [debug] [Thread-9  ]: Finished running node model.billy_bulky.int_products_performance
+[0m12:58:52.179164 [debug] [Thread-4  ]: Began running node model.billy_bulky.products
+[0m12:58:52.179895 [info ] [Thread-4  ]: 10 of 11 START sql table model marts.products .................................. [RUN]
+[0m12:58:52.181553 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__products, now model.billy_bulky.products)
+[0m12:58:52.182160 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.products
+[0m12:58:52.186888 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.products"
+[0m12:58:52.188022 [debug] [Thread-10 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16409efd0>]}
+[0m12:58:52.188874 [info ] [Thread-10 ]: 8 of 11 OK created sql table model intermediate.int_sales_trend ................ [[32mSUCCESS 1[0m in 2.90s]
+[0m12:58:52.189707 [debug] [Thread-10 ]: Finished running node model.billy_bulky.int_sales_trend
+[0m12:58:52.190435 [debug] [Thread-4  ]: Timing info for model.billy_bulky.products (compile): 12:58:52.182531 => 12:58:52.190152
+[0m12:58:52.191033 [debug] [Thread-4  ]: Began executing node model.billy_bulky.products
+[0m12:58:52.191586 [debug] [Thread-3  ]: Began running node model.billy_bulky.sales
+[0m12:58:52.195502 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.products"
+[0m12:58:52.196025 [info ] [Thread-3  ]: 11 of 11 START sql table model marts.sales ..................................... [RUN]
+[0m12:58:52.196847 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__orders, now model.billy_bulky.sales)
+[0m12:58:52.197278 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.sales
+[0m12:58:52.201355 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.sales"
+[0m12:58:52.202484 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.products"
+[0m12:58:52.203044 [debug] [Thread-4  ]: On model.billy_bulky.products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.products"} */
+create or replace transient table E_COMMERCE.marts.products
+         as
+        (WITH final AS (
+    SELECT
+        pp.PRODUCT_ID
+        , pp.NAME
+        , pp.CATEGORY
+        , pp.PRICE
+        , pp.average_sale_price
+        , pp.total_sales
+        , pp.total_units_sold
+        , pp.total_sales_value
+        , pp.turnover_rate
+        , pp.STOCK_LEVEL
+    FROM E_COMMERCE.intermediate.int_products_performance pp
+)
+
+SELECT * FROM final
+        );
+[0m12:58:52.203491 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m12:58:52.204922 [debug] [Thread-3  ]: Timing info for model.billy_bulky.sales (compile): 12:58:52.197522 => 12:58:52.204585
+[0m12:58:52.205775 [debug] [Thread-3  ]: Began executing node model.billy_bulky.sales
+[0m12:58:52.208860 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.sales"
+[0m12:58:52.211269 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.sales"
+[0m12:58:52.211723 [debug] [Thread-3  ]: On model.billy_bulky.sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.sales"} */
+create or replace transient table E_COMMERCE.marts.sales
+         as
+        (WITH enriched_orders AS (
+    SELECT
+        o.ORDER_ID
+        , o.CUSTOMER_ID
+        , o.PRODUCT_ID
+        , o.QUANTITY
+        , o.ORDER_DATE
+        , o.STATUS
+        , p.CATEGORY
+        , p.PRICE AS unit_price
+        , (o.QUANTITY * p.PRICE) AS total_price
+        , c.COUNTRY
+    FROM E_COMMERCE.staging.staging_shopify__orders o
+    JOIN E_COMMERCE.staging.staging_shopify__products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    JOIN E_COMMERCE.staging.staging_shopify__customers c ON o.CUSTOMER_ID = c.CUSTOMER_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+)
+
+SELECT
+    eo.ORDER_ID
+    , eo.CUSTOMER_ID
+    , eo.PRODUCT_ID
+    , eo.QUANTITY
+    , eo.ORDER_DATE
+    , eo.STATUS
+    , eo.CATEGORY
+    , eo.unit_price
+    , eo.total_price
+    , eo.COUNTRY
+    , sa.daily_orders
+    , sa.daily_units_sold
+    , sa.daily_sales_value
+FROM enriched_orders eo
+LEFT JOIN E_COMMERCE.intermediate.int_sales_trend sa ON DATE(eo.ORDER_DATE) = sa.sale_date
+        );
+[0m12:58:52.212145 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m12:58:53.872469 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:58:53.883418 [debug] [Thread-4  ]: Timing info for model.billy_bulky.products (execute): 12:58:52.191878 => 12:58:53.882784
+[0m12:58:53.884601 [debug] [Thread-4  ]: On model.billy_bulky.products: Close
+[0m12:58:53.985014 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:58:53.993170 [debug] [Thread-1  ]: Timing info for model.billy_bulky.customers (execute): 12:58:52.113445 => 12:58:53.992818
+[0m12:58:53.993883 [debug] [Thread-1  ]: On model.billy_bulky.customers: Close
+[0m12:58:54.059099 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:58:54.064052 [debug] [Thread-3  ]: Timing info for model.billy_bulky.sales (execute): 12:58:52.206077 => 12:58:54.063646
+[0m12:58:54.064912 [debug] [Thread-3  ]: On model.billy_bulky.sales: Close
+[0m12:58:54.248585 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163fa0e80>]}
+[0m12:58:54.249543 [info ] [Thread-4  ]: 10 of 11 OK created sql table model marts.products ............................. [[32mSUCCESS 1[0m in 2.07s]
+[0m12:58:54.250300 [debug] [Thread-4  ]: Finished running node model.billy_bulky.products
+[0m12:58:57.565513 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16401cc40>]}
+[0m12:58:57.567036 [info ] [Thread-1  ]: 9 of 11 OK created sql table model marts.customers ............................. [[32mSUCCESS 1[0m in 5.46s]
+[0m12:58:57.568108 [debug] [Thread-1  ]: Finished running node model.billy_bulky.customers
+[0m12:58:57.768992 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cafa500d-dc40-4088-ba52-da08e5714ef2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163fa0160>]}
+[0m12:58:57.770353 [info ] [Thread-3  ]: 11 of 11 OK created sql table model marts.sales ................................ [[32mSUCCESS 1[0m in 5.57s]
+[0m12:58:57.771392 [debug] [Thread-3  ]: Finished running node model.billy_bulky.sales
+[0m12:58:57.774601 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:58:57.775308 [debug] [MainThread]: Connection 'model.billy_bulky.customers' was properly closed.
+[0m12:58:57.775856 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__customers' was properly closed.
+[0m12:58:57.776353 [debug] [MainThread]: Connection 'model.billy_bulky.sales' was properly closed.
+[0m12:58:57.776835 [debug] [MainThread]: Connection 'model.billy_bulky.products' was properly closed.
+[0m12:58:57.777307 [debug] [MainThread]: Connection 'list_E_COMMERCE_PUBLIC' was properly closed.
+[0m12:58:57.777779 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_inventory' was properly closed.
+[0m12:58:57.778251 [debug] [MainThread]: Connection 'model.billy_bulky.int_customers_segmentation' was properly closed.
+[0m12:58:57.778733 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_performance' was properly closed.
+[0m12:58:57.779227 [debug] [MainThread]: Connection 'model.billy_bulky.int_sales_trend' was properly closed.
+[0m12:58:57.779882 [info ] [MainThread]: 
+[0m12:58:57.780502 [info ] [MainThread]: Finished running 4 view models, 1 incremental model, 6 table models in 0 hours 0 minutes and 14.74 seconds (14.74s).
+[0m12:58:57.783285 [debug] [MainThread]: Command end result
+[0m12:58:57.802402 [info ] [MainThread]: 
+[0m12:58:57.803042 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:58:57.803421 [info ] [MainThread]: 
+[0m12:58:57.803787 [error] [MainThread]:   Database Error in model int_products_inventory (models/intermediate/products/int_products_inventory.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'E_COMMERCE.INTERMEDIATE.INT_PRODUCTS_INVENTORY' does not exist or not authorized.
+  compiled Code at target/run/billy_bulky/models/intermediate/products/int_products_inventory.sql
+[0m12:58:57.804178 [info ] [MainThread]: 
+[0m12:58:57.804559 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=1 SKIP=0 TOTAL=11
+[0m12:58:57.807225 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 16.677258, "process_user_time": 6.728015, "process_kernel_time": 0.441607, "process_mem_max_rss": "235077632", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:58:57.807806 [debug] [MainThread]: Command `dbt run` failed at 12:58:57.807674 after 16.68 seconds
+[0m12:58:57.808212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032716d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137906850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1633d9250>]}
+[0m12:58:57.808628 [debug] [MainThread]: Flushing usage events
+[0m13:23:46.696753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102b7deb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053cc7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053cca90>]}
+
+
+============================== 13:23:46.699593 | 85957646-6f3f-4a66-aa83-8a9b45d5d2bd ==============================
+[0m13:23:46.699593 [info ] [MainThread]: Running with dbt=1.7.1
+[0m13:23:46.699969 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/bitlevi/Documents/billy_bulky_ecommerce/billy_bulky_ecommerce/logs', 'version_check': 'True', 'profiles_dir': '/Users/bitlevi/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:23:47.531506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10266e940>]}
+[0m13:23:47.579268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123a99280>]}
+[0m13:23:47.579883 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m13:23:47.592731 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m13:23:47.604394 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:23:47.604782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123aaa7c0>]}
+[0m13:23:48.326494 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'orders' in the 'models' section of file 'models/staging/shopify/_shopify__schema.yml'
+[0m13:23:48.436242 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_sales' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m13:23:48.437765 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_customers' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m13:23:48.439019 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'marts_products' in the 'models' section of file 'models/marts/_marts__models.yml'
+[0m13:23:48.487303 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_products_inventory' in the 'models' section of file 'models/intermediate/products/_int_products__models.yml'
+[0m13:23:48.527406 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_orders_order_id.fed79b3a6e' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.527757 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_order_id.cf6c17daed' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.527997 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_customer_id.c5f02694af' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.528217 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_product_id.3523c78a66' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.528432 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_quantity.0e6bb23b03' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.528653 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_order_date.6910a855fe' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.528865 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_orders_status.8a27272c0a' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.529082 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.accepted_values_orders_status__cancelled__processing__delivered__shipped.fbff2d9925' (models/staging/shopify/_shopify__schema.yml) depends on a node named 'orders' in package '' which was not found
+[0m13:23:48.529325 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_sales_order_id.825e23650b' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.529538 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_order_id.842b56ef2f' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.529747 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_customer_id.189ac71c42' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.529958 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_marts_sales_customer_id__customer_id__ref_customers_.74e21c3398' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.530166 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_product_id.12beecf4f2' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.530378 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_marts_sales_product_id__product_id__ref_products_.77e7665182' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.530587 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_quantity.ea8c580869' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.530798 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_order_date.90eaa9e7fe' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.531005 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_status.e9b4b90247' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.531212 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_category.a98218f68d' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.531420 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_unit_price.321f152a2a' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.531627 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_total_price.015724a7e6' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.531833 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_sales_country.5f628b732c' (models/marts/_marts__models.yml) depends on a node named 'marts_sales' in package '' which was not found
+[0m13:23:48.532039 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_customers_customer_id.9c72620f57' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.532246 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_customer_id.fc7763eff9' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.532453 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_customers_email.6210d26820' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.532661 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_email.637d2131e6' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.532874 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_join_date.6378efd424' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.533081 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_total_orders.7cdc5122e5' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.533289 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_customers_total_spent.d5343aecc7' (models/marts/_marts__models.yml) depends on a node named 'marts_customers' in package '' which was not found
+[0m13:23:48.533495 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_marts_products_product_id.e96f554683' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.533700 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_product_id.9b354ae761' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.533903 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_name.f0d9c8d191' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.534115 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_category.1212ed3683' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.534333 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_price.d6207a2896' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.534616 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_total_units_sold.6822a804df' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.534853 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_marts_products_total_sales_value.b0a2a654b3' (models/marts/_marts__models.yml) depends on a node named 'marts_products' in package '' which was not found
+[0m13:23:48.535164 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_snapshot_date.ea839d8715' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.535387 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.unique_int_products_inventory_snapshot_date.957e4a3412' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.535603 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.date_int_products_inventory_snapshot_date.a5f6775670' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.535816 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_product_id.f6ac5935e3' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.536037 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.relationships_int_products_inventory_product_id__product_id__ref_staging_shopify__products_.74f8c28027' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.536254 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.not_null_int_products_inventory_stock_level.31d0098b4a' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.536465 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.billy_bulky.numeric_int_products_inventory_stock_level.dd2cae1df8' (models/intermediate/products/_int_products__models.yml) depends on a node named 'int_products_inventory' in package '' which was not found
+[0m13:23:48.566825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124de50d0>]}
+[0m13:23:48.581142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123f25070>]}
+[0m13:23:48.581494 [info ] [MainThread]: Found 10 models, 1 snapshot, 1 seed, 47 tests, 4 sources, 0 exposures, 0 metrics, 431 macros, 0 groups, 0 semantic models
+[0m13:23:48.581718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123fb47c0>]}
+[0m13:23:48.583300 [info ] [MainThread]: 
+[0m13:23:48.583798 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:23:48.584570 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m13:23:48.592819 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m13:23:48.593338 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE'
+[0m13:23:48.593548 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m13:23:48.594970 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE"
+[0m13:23:48.595176 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:23:48.595377 [debug] [ThreadPool]: On list_E_COMMERCE: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE"} */
+show terse schemas in database E_COMMERCE
+    limit 10000
+[0m13:23:48.596153 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:23:50.026301 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m13:23:50.027926 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m13:23:50.397673 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.0 seconds
+[0m13:23:50.399857 [debug] [ThreadPool]: On list_E_COMMERCE: Close
+[0m13:23:50.766128 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_staging)
+[0m13:23:50.768478 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_E_COMMERCE, now list_E_COMMERCE_marts)
+[0m13:23:50.770005 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_PUBLIC'
+[0m13:23:50.773671 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_E_COMMERCE_snapshots'
+[0m13:23:50.789481 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_staging"
+[0m13:23:50.793054 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_marts"
+[0m13:23:50.796461 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_PUBLIC"
+[0m13:23:50.799684 [debug] [ThreadPool]: Using snowflake connection "list_E_COMMERCE_snapshots"
+[0m13:23:50.800151 [debug] [ThreadPool]: On list_E_COMMERCE_staging: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_staging"} */
+show terse objects in E_COMMERCE.staging limit 10000
+[0m13:23:50.800590 [debug] [ThreadPool]: On list_E_COMMERCE_marts: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_marts"} */
+show terse objects in E_COMMERCE.marts limit 10000
+[0m13:23:50.801003 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_PUBLIC"} */
+show terse objects in E_COMMERCE.PUBLIC limit 10000
+[0m13:23:50.801406 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "connection_name": "list_E_COMMERCE_snapshots"} */
+show terse objects in E_COMMERCE.snapshots limit 10000
+[0m13:23:50.801804 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:23:50.802168 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:23:50.802535 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:23:50.802892 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:23:52.085555 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m13:23:52.087941 [debug] [ThreadPool]: On list_E_COMMERCE_staging: Close
+[0m13:23:52.091101 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:23:52.093085 [debug] [ThreadPool]: On list_E_COMMERCE_snapshots: Close
+[0m13:23:52.120453 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m13:23:52.122171 [debug] [ThreadPool]: On list_E_COMMERCE_marts: Close
+[0m13:23:52.128206 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b07a27-0001-831c-0004-d8be0001358e
+[0m13:23:52.128531 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m13:23:52.128902 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m13:23:52.129170 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:23:52.129452 [debug] [ThreadPool]: On list_E_COMMERCE_PUBLIC: Close
+[0m13:23:52.544891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1322049d0>]}
+[0m13:23:52.547641 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m13:23:52.548940 [info ] [MainThread]: 
+[0m13:23:52.556499 [debug] [Thread-1  ]: Began running node model.billy_bulky.staging__shopify__products_history
+[0m13:23:52.557335 [debug] [Thread-2  ]: Began running node model.billy_bulky.staging_shopify__customers
+[0m13:23:52.558164 [debug] [Thread-3  ]: Began running node model.billy_bulky.staging_shopify__orders
+[0m13:23:52.560810 [info ] [Thread-1  ]: 1 of 7 START sql view model staging.staging__shopify__products_history ......... [RUN]
+[0m13:23:52.562453 [debug] [Thread-4  ]: Began running node model.billy_bulky.staging_shopify__products
+[0m13:23:52.563516 [info ] [Thread-2  ]: 2 of 7 START sql view model staging.staging_shopify__customers ................. [RUN]
+[0m13:23:52.564519 [info ] [Thread-3  ]: 3 of 7 START sql view model staging.staging_shopify__orders .................... [RUN]
+[0m13:23:52.565921 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_staging, now model.billy_bulky.staging__shopify__products_history)
+[0m13:23:52.566800 [info ] [Thread-4  ]: 4 of 7 START sql view model staging.staging_shopify__products .................. [RUN]
+[0m13:23:52.567986 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_marts, now model.billy_bulky.staging_shopify__customers)
+[0m13:23:52.569083 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_PUBLIC, now model.billy_bulky.staging_shopify__orders)
+[0m13:23:52.569771 [debug] [Thread-1  ]: Began compiling node model.billy_bulky.staging__shopify__products_history
+[0m13:23:52.570830 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly list_E_COMMERCE_snapshots, now model.billy_bulky.staging_shopify__products)
+[0m13:23:52.571383 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.staging_shopify__customers
+[0m13:23:52.571932 [debug] [Thread-3  ]: Began compiling node model.billy_bulky.staging_shopify__orders
+[0m13:23:52.583710 [debug] [Thread-1  ]: Writing injected SQL for node "model.billy_bulky.staging__shopify__products_history"
+[0m13:23:52.584211 [debug] [Thread-4  ]: Began compiling node model.billy_bulky.staging_shopify__products
+[0m13:23:52.587662 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__customers"
+[0m13:23:52.590785 [debug] [Thread-3  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__orders"
+[0m13:23:52.594162 [debug] [Thread-4  ]: Writing injected SQL for node "model.billy_bulky.staging_shopify__products"
+[0m13:23:52.595075 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (compile): 13:23:52.587949 => 13:23:52.594854
+[0m13:23:52.595485 [debug] [Thread-3  ]: Began executing node model.billy_bulky.staging_shopify__orders
+[0m13:23:52.595960 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (compile): 13:23:52.584527 => 13:23:52.595750
+[0m13:23:52.597307 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (compile): 13:23:52.591157 => 13:23:52.597105
+[0m13:23:52.597697 [debug] [Thread-2  ]: Began executing node model.billy_bulky.staging_shopify__customers
+[0m13:23:52.598171 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (compile): 13:23:52.572303 => 13:23:52.597912
+[0m13:23:52.598545 [debug] [Thread-4  ]: Began executing node model.billy_bulky.staging_shopify__products
+[0m13:23:52.620986 [debug] [Thread-3  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__orders"
+[0m13:23:52.623240 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__customers"
+[0m13:23:52.623530 [debug] [Thread-1  ]: Began executing node model.billy_bulky.staging__shopify__products_history
+[0m13:23:52.625635 [debug] [Thread-4  ]: Writing runtime sql for node "model.billy_bulky.staging_shopify__products"
+[0m13:23:52.627805 [debug] [Thread-1  ]: Writing runtime sql for node "model.billy_bulky.staging__shopify__products_history"
+[0m13:23:52.628456 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.staging_shopify__customers"
+[0m13:23:52.628742 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__customers"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__customers
+  
+   as (
+    WITH customers AS (
+    SELECT * FROM SHOPIFY.PUBLIC.customers
+)
+
+SELECT
+    CUSTOMER_ID
+    , FIRST_NAME
+    , LAST_NAME
+    , EMAIL
+    , JOIN_DATE
+    , COUNTRY
+FROM customers
+  );
+[0m13:23:52.629277 [debug] [Thread-3  ]: Using snowflake connection "model.billy_bulky.staging_shopify__orders"
+[0m13:23:52.629523 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m13:23:52.629966 [debug] [Thread-4  ]: Using snowflake connection "model.billy_bulky.staging_shopify__products"
+[0m13:23:52.630222 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__orders"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__orders
+  
+   as (
+    WITH orders AS (
+    SELECT * FROM SHOPIFY.PUBLIC.orders
+)
+
+SELECT
+    ORDER_ID
+    , CUSTOMER_ID
+    , PRODUCT_ID
+    , QUANTITY
+    , ORDER_DATE
+    , STATUS
+FROM orders
+  );
+[0m13:23:52.630728 [debug] [Thread-1  ]: Using snowflake connection "model.billy_bulky.staging__shopify__products_history"
+[0m13:23:52.631133 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging_shopify__products"} */
+create or replace   view E_COMMERCE.staging.staging_shopify__products
+  
+   as (
+    WITH products AS (
+    SELECT * FROM SHOPIFY.PUBLIC.products
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+FROM products
+  );
+[0m13:23:52.631589 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m13:23:52.631835 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.staging__shopify__products_history"} */
+create or replace   view E_COMMERCE.staging.staging__shopify__products_history
+  
+   as (
+    WITH products AS (
+    SELECT * FROM E_COMMERCE.SNAPSHOTS.products_snapshot
+)
+
+SELECT
+    PRODUCT_ID
+    , NAME
+    , CATEGORY
+    , PRICE
+    , STOCK_LEVEL
+    , DBT_SCD_ID
+    , DBT_UPDATED_AT
+    , DBT_VALID_FROM
+    , DBT_VALID_TO
+FROM products
+  );
+[0m13:23:52.632328 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m13:23:52.632876 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:23:53.864524 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:23:53.887678 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m13:23:53.935988 [debug] [Thread-2  ]: Timing info for model.billy_bulky.staging_shopify__customers (execute): 13:23:52.621182 => 13:23:53.935750
+[0m13:23:53.938045 [debug] [Thread-4  ]: Timing info for model.billy_bulky.staging_shopify__products (execute): 13:23:52.623693 => 13:23:53.937831
+[0m13:23:53.938444 [debug] [Thread-2  ]: On model.billy_bulky.staging_shopify__customers: Close
+[0m13:23:53.938838 [debug] [Thread-4  ]: On model.billy_bulky.staging_shopify__products: Close
+[0m13:23:54.457541 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124076220>]}
+[0m13:23:54.462179 [info ] [Thread-4  ]: 4 of 7 OK created sql view model staging.staging_shopify__products ............. [[32mSUCCESS 1[0m in 1.89s]
+[0m13:23:54.464313 [debug] [Thread-4  ]: Finished running node model.billy_bulky.staging_shopify__products
+[0m13:23:54.468721 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1322f4ca0>]}
+[0m13:23:54.470360 [info ] [Thread-2  ]: 2 of 7 OK created sql view model staging.staging_shopify__customers ............ [[32mSUCCESS 1[0m in 1.90s]
+[0m13:23:54.471749 [debug] [Thread-2  ]: Finished running node model.billy_bulky.staging_shopify__customers
+[0m13:23:54.623387 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m13:23:54.629325 [debug] [Thread-1  ]: Timing info for model.billy_bulky.staging__shopify__products_history (execute): 13:23:52.625931 => 13:23:54.628914
+[0m13:23:54.631394 [debug] [Thread-1  ]: On model.billy_bulky.staging__shopify__products_history: Close
+[0m13:23:54.632937 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m13:23:54.641210 [debug] [Thread-3  ]: Timing info for model.billy_bulky.staging_shopify__orders (execute): 13:23:52.596226 => 13:23:54.640636
+[0m13:23:54.642494 [debug] [Thread-3  ]: On model.billy_bulky.staging_shopify__orders: Close
+[0m13:23:55.096182 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124b1edf0>]}
+[0m13:23:55.097269 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1249a3dc0>]}
+[0m13:23:55.098094 [info ] [Thread-1  ]: 1 of 7 OK created sql view model staging.staging__shopify__products_history .... [[32mSUCCESS 1[0m in 2.53s]
+[0m13:23:55.099500 [debug] [Thread-1  ]: Finished running node model.billy_bulky.staging__shopify__products_history
+[0m13:23:55.098732 [info ] [Thread-3  ]: 3 of 7 OK created sql view model staging.staging_shopify__orders ............... [[32mSUCCESS 1[0m in 2.53s]
+[0m13:23:55.100428 [debug] [Thread-3  ]: Finished running node model.billy_bulky.staging_shopify__orders
+[0m13:23:55.101323 [debug] [Thread-6  ]: Began running node model.billy_bulky.int_customers_segmentation
+[0m13:23:55.101904 [debug] [Thread-7  ]: Began running node model.billy_bulky.int_products_performance
+[0m13:23:55.102837 [debug] [Thread-6  ]: Acquiring new snowflake connection 'model.billy_bulky.int_customers_segmentation'
+[0m13:23:55.103299 [debug] [Thread-8  ]: Began running node model.billy_bulky.int_sales_trend
+[0m13:23:55.104193 [debug] [Thread-7  ]: Acquiring new snowflake connection 'model.billy_bulky.int_products_performance'
+[0m13:23:55.104656 [debug] [Thread-6  ]: Began compiling node model.billy_bulky.int_customers_segmentation
+[0m13:23:55.105397 [debug] [Thread-8  ]: Acquiring new snowflake connection 'model.billy_bulky.int_sales_trend'
+[0m13:23:55.105789 [debug] [Thread-7  ]: Began compiling node model.billy_bulky.int_products_performance
+[0m13:23:55.110538 [debug] [Thread-6  ]: Writing injected SQL for node "model.billy_bulky.int_customers_segmentation"
+[0m13:23:55.111003 [debug] [Thread-8  ]: Began compiling node model.billy_bulky.int_sales_trend
+[0m13:23:55.114209 [debug] [Thread-7  ]: Writing injected SQL for node "model.billy_bulky.int_products_performance"
+[0m13:23:55.117360 [debug] [Thread-8  ]: Writing injected SQL for node "model.billy_bulky.int_sales_trend"
+[0m13:23:55.118114 [debug] [Thread-6  ]: Timing info for model.billy_bulky.int_customers_segmentation (compile): 13:23:55.106029 => 13:23:55.117901
+[0m13:23:55.118543 [debug] [Thread-7  ]: Timing info for model.billy_bulky.int_products_performance (compile): 13:23:55.111264 => 13:23:55.118331
+[0m13:23:55.119307 [debug] [Thread-6  ]: Finished running node model.billy_bulky.int_customers_segmentation
+[0m13:23:55.120227 [debug] [Thread-7  ]: Finished running node model.billy_bulky.int_products_performance
+[0m13:23:55.120721 [debug] [Thread-8  ]: Timing info for model.billy_bulky.int_sales_trend (compile): 13:23:55.114525 => 13:23:55.120541
+[0m13:23:55.121182 [debug] [Thread-10 ]: Began running node model.billy_bulky.customers
+[0m13:23:55.121831 [debug] [Thread-8  ]: Finished running node model.billy_bulky.int_sales_trend
+[0m13:23:55.122138 [debug] [Thread-5  ]: Began running node model.billy_bulky.products
+[0m13:23:55.122518 [info ] [Thread-10 ]: 5 of 7 START sql table model marts.customers ................................... [RUN]
+[0m13:23:55.122974 [debug] [Thread-2  ]: Began running node model.billy_bulky.sales
+[0m13:23:55.123339 [info ] [Thread-5  ]: 6 of 7 START sql table model marts.products .................................... [RUN]
+[0m13:23:55.124000 [debug] [Thread-10 ]: Acquiring new snowflake connection 'model.billy_bulky.customers'
+[0m13:23:55.124420 [info ] [Thread-2  ]: 7 of 7 START sql table model marts.sales ....................................... [RUN]
+[0m13:23:55.125040 [debug] [Thread-5  ]: Acquiring new snowflake connection 'model.billy_bulky.products'
+[0m13:23:55.125351 [debug] [Thread-10 ]: Began compiling node model.billy_bulky.customers
+[0m13:23:55.125841 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.billy_bulky.staging_shopify__customers, now model.billy_bulky.sales)
+[0m13:23:55.126142 [debug] [Thread-5  ]: Began compiling node model.billy_bulky.products
+[0m13:23:55.133433 [debug] [Thread-2  ]: Began compiling node model.billy_bulky.sales
+[0m13:23:55.135351 [debug] [Thread-10 ]: Writing injected SQL for node "model.billy_bulky.customers"
+[0m13:23:55.139915 [debug] [Thread-5  ]: Writing injected SQL for node "model.billy_bulky.products"
+[0m13:23:55.148088 [debug] [Thread-2  ]: Writing injected SQL for node "model.billy_bulky.sales"
+[0m13:23:55.148795 [debug] [Thread-2  ]: Timing info for model.billy_bulky.sales (compile): 13:23:55.140104 => 13:23:55.148654
+[0m13:23:55.149080 [debug] [Thread-10 ]: Timing info for model.billy_bulky.customers (compile): 13:23:55.126336 => 13:23:55.148935
+[0m13:23:55.149303 [debug] [Thread-2  ]: Began executing node model.billy_bulky.sales
+[0m13:23:55.149544 [debug] [Thread-10 ]: Began executing node model.billy_bulky.customers
+[0m13:23:55.162348 [debug] [Thread-5  ]: Timing info for model.billy_bulky.products (compile): 13:23:55.135546 => 13:23:55.162221
+[0m13:23:55.163947 [debug] [Thread-10 ]: Writing runtime sql for node "model.billy_bulky.customers"
+[0m13:23:55.164129 [debug] [Thread-2  ]: Writing runtime sql for node "model.billy_bulky.sales"
+[0m13:23:55.164355 [debug] [Thread-5  ]: Began executing node model.billy_bulky.products
+[0m13:23:55.166774 [debug] [Thread-2  ]: Using snowflake connection "model.billy_bulky.sales"
+[0m13:23:55.168577 [debug] [Thread-10 ]: Using snowflake connection "model.billy_bulky.customers"
+[0m13:23:55.170803 [debug] [Thread-5  ]: Writing runtime sql for node "model.billy_bulky.products"
+[0m13:23:55.171171 [debug] [Thread-2  ]: On model.billy_bulky.sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.sales"} */
+create or replace transient table E_COMMERCE.marts.sales
+         as
+        (WITH  __dbt__cte__int_sales_trend as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, daily_sales AS (
+    SELECT
+        DATE(ORDER_DATE) AS sale_date
+        , COUNT(DISTINCT ORDER_ID) AS total_orders
+        , SUM(QUANTITY) AS total_units_sold
+        , SUM(QUANTITY * PRICE) AS total_sales_value
+    FROM orders AS o
+    JOIN products AS p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY sale_date
+)
+
+, weekly_sales AS (
+    SELECT
+        DATE_TRUNC('week', sale_date) AS sale_week
+        , SUM(total_orders) AS weekly_orders
+        , SUM(total_units_sold) AS weekly_units_sold
+        , SUM(total_sales_value) AS weekly_sales_value
+    FROM daily_sales
+    GROUP BY sale_week
+)
+
+, monthly_sales AS (
+    SELECT
+        DATE_TRUNC('month', sale_date) AS sale_month
+        , SUM(total_orders) AS monthly_orders
+        , SUM(total_units_sold) AS monthly_units_sold
+        , SUM(total_sales_value) AS monthly_sales_value
+    FROM daily_sales
+    GROUP BY sale_month
+)
+
+, yearly_sales AS (
+    SELECT
+        DATE_TRUNC('year', sale_date) AS sale_year
+        , SUM(total_orders) AS yearly_orders
+        , SUM(total_units_sold) AS yearly_units_sold
+        , SUM(total_sales_value) AS yearly_sales_value
+    FROM daily_sales
+    GROUP BY sale_year
+)
+
+SELECT
+    d.sale_date
+    , d.total_orders AS daily_orders
+    , d.total_units_sold AS daily_units_sold
+    , d.total_sales_value AS daily_sales_value
+    , w.weekly_orders
+    , w.weekly_units_sold
+    , w.weekly_sales_value
+    , m.monthly_orders
+    , m.monthly_units_sold
+    , m.monthly_sales_value
+    , y.yearly_orders
+    , y.yearly_units_sold
+    , y.yearly_sales_value
+FROM daily_sales d
+LEFT JOIN weekly_sales w ON DATE_TRUNC('week', d.sale_date) = w.sale_week
+LEFT JOIN monthly_sales m ON DATE_TRUNC('month', d.sale_date) = m.sale_month
+LEFT JOIN yearly_sales y ON DATE_TRUNC('year', d.sale_date) = y.sale_year
+), enriched_orders AS (
+    SELECT
+        o.ORDER_ID
+        , o.CUSTOMER_ID
+        , o.PRODUCT_ID
+        , o.QUANTITY
+        , o.ORDER_DATE
+        , o.STATUS
+        , p.CATEGORY
+        , p.PRICE AS unit_price
+        , (o.QUANTITY * p.PRICE) AS total_price
+        , c.COUNTRY
+    FROM E_COMMERCE.staging.staging_shopify__orders o
+    JOIN E_COMMERCE.staging.staging_shopify__products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    JOIN E_COMMERCE.staging.staging_shopify__customers c ON o.CUSTOMER_ID = c.CUSTOMER_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+)
+
+SELECT
+    eo.ORDER_ID
+    , eo.CUSTOMER_ID
+    , eo.PRODUCT_ID
+    , eo.QUANTITY
+    , eo.ORDER_DATE
+    , eo.STATUS
+    , eo.CATEGORY
+    , eo.unit_price
+    , eo.total_price
+    , eo.COUNTRY
+    , sa.daily_orders
+    , sa.daily_units_sold
+    , sa.daily_sales_value
+FROM enriched_orders eo
+LEFT JOIN __dbt__cte__int_sales_trend sa ON DATE(eo.ORDER_DATE) = sa.sale_date
+        );
+[0m13:23:55.171601 [debug] [Thread-10 ]: On model.billy_bulky.customers: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.customers"} */
+create or replace transient table E_COMMERCE.marts.customers
+         as
+        (WITH  __dbt__cte__int_customers_segmentation as (
+WITH customers AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__customers
+)
+
+, orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, order_aggregates AS (
+    SELECT
+        o.CUSTOMER_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS frequency
+        , SUM(o.QUANTITY * p.PRICE) AS monetary
+        , AVG(o.QUANTITY * p.PRICE) AS average_order_value
+        , MAX(o.ORDER_DATE) AS last_purchase_date
+        , COUNT(CASE WHEN o.STATUS = 'cancelled' THEN 1 END) AS cancelled_orders
+        , COUNT(*) AS total_orders
+    FROM orders o
+    JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    GROUP BY o.CUSTOMER_ID
+)
+
+, customer_tenure AS (
+    SELECT
+        CUSTOMER_ID
+        , JOIN_DATE
+        , CURRENT_DATE - JOIN_DATE AS tenure
+    FROM customers
+)
+
+, customer_recency AS (
+    SELECT
+        CUSTOMER_ID
+        , CURRENT_DATE - last_purchase_date AS recency
+    FROM order_aggregates
+)
+
+, final AS (
+    SELECT
+        c.CUSTOMER_ID
+        , c.FIRST_NAME
+        , c.LAST_NAME
+        , c.EMAIL
+        , c.JOIN_DATE
+        , c.COUNTRY
+        , o.frequency
+        , o.monetary
+        , o.average_order_value
+        , o.cancelled_orders
+        , o.total_orders
+        , CASE 
+            WHEN o.total_orders > 0 THEN ROUND((o.cancelled_orders::FLOAT / o.total_orders) * 100, 2) 
+            ELSE 0 
+          END AS cancellation_rate
+        , r.recency
+        , t.tenure
+    FROM customer_tenure t
+    JOIN customers c ON t.CUSTOMER_ID = c.CUSTOMER_ID
+    JOIN order_aggregates o ON c.CUSTOMER_ID = o.CUSTOMER_ID
+    JOIN customer_recency r ON c.CUSTOMER_ID = r.CUSTOMER_ID
+)
+
+SELECT * FROM final
+), source AS (
+    SELECT
+        icp.CUSTOMER_ID
+        , icp.FIRST_NAME
+        , icp.LAST_NAME
+        , icp.EMAIL
+        , icp.JOIN_DATE
+        , icp.COUNTRY
+        , icp.frequency AS total_orders
+        , icp.monetary AS total_spent
+        , icp.recency
+        , icp.tenure
+    FROM __dbt__cte__int_customers_segmentation icp
+)
+
+, final AS (
+SELECT
+    s.CUSTOMER_ID
+    , s.FIRST_NAME
+    , s.LAST_NAME
+    , s.EMAIL
+    , s.JOIN_DATE
+    , s.COUNTRY
+    , s.total_orders
+    , s.total_spent
+    , s.recency
+    , s.tenure
+    , CASE
+        WHEN total_spent > 1000 THEN 'VIP'
+        ELSE 'Regular'
+    END AS customer_segment
+FROM source s
+)
+
+SELECT * FROM final
+        );
+[0m13:23:55.171974 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m13:23:55.172220 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m13:23:55.173840 [debug] [Thread-5  ]: Using snowflake connection "model.billy_bulky.products"
+[0m13:23:55.174471 [debug] [Thread-5  ]: On model.billy_bulky.products: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "billy_bulky", "target_name": "dev", "node_id": "model.billy_bulky.products"} */
+create or replace transient table E_COMMERCE.marts.products
+         as
+        (WITH  __dbt__cte__int_products_performance as (
+WITH orders AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
+)
+
+, products AS (
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
+)
+
+, product_sales AS (
+    SELECT
+        o.PRODUCT_ID
+        , COUNT(DISTINCT o.ORDER_ID) AS total_sales
+        , SUM(o.QUANTITY) AS total_units_sold
+        , SUM(o.QUANTITY * p.PRICE) AS total_sales_value
+    FROM orders o
+    INNER JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
+    WHERE o.STATUS NOT IN ('cancelled') 
+    GROUP BY o.PRODUCT_ID
+)
+
+, product_averages AS (
+    SELECT
+        PRODUCT_ID
+        , (total_sales_value / NULLIF(total_units_sold, 0)) AS average_sale_price
+    FROM product_sales
+)
+
+, product_stock_turnover AS (
+    SELECT
+        p.PRODUCT_ID
+        , p.STOCK_LEVEL
+        , (total_units_sold / NULLIF(p.STOCK_LEVEL, 0)) AS turnover_rate
+    FROM product_sales ps
+    INNER JOIN products p ON ps.PRODUCT_ID = p.PRODUCT_ID
+)
+
+, final AS (
+    SELECT
+    p.PRODUCT_ID
+    , p.NAME
+    , p.CATEGORY
+    , p.PRICE
+    , pa.average_sale_price
+    , ps.total_sales
+    , ps.total_units_sold
+    , ps.total_sales_value
+    , pst.turnover_rate
+    , p.STOCK_LEVEL
+FROM products p
+LEFT JOIN product_sales ps ON p.PRODUCT_ID = ps.PRODUCT_ID
+LEFT JOIN product_averages pa ON p.PRODUCT_ID = pa.PRODUCT_ID
+LEFT JOIN product_stock_turnover pst ON p.PRODUCT_ID = pst.PRODUCT_ID
+)
+
+SELECT * FROM final
+), final AS (
+    SELECT
+        pp.PRODUCT_ID
+        , pp.NAME
+        , pp.CATEGORY
+        , pp.PRICE
+        , pp.average_sale_price
+        , pp.total_sales
+        , pp.total_units_sold
+        , pp.total_sales_value
+        , pp.turnover_rate
+        , pp.STOCK_LEVEL
+    FROM __dbt__cte__int_products_performance pp
+)
+
+SELECT * FROM final
+        );
+[0m13:23:55.174764 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m13:23:58.328500 [debug] [Thread-5  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m13:23:58.339847 [debug] [Thread-5  ]: Timing info for model.billy_bulky.products (execute): 13:23:55.168714 => 13:23:58.339008
+[0m13:23:58.341105 [debug] [Thread-5  ]: On model.billy_bulky.products: Close
+[0m13:23:58.526176 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m13:23:58.533337 [debug] [Thread-2  ]: Timing info for model.billy_bulky.sales (execute): 13:23:55.149688 => 13:23:58.532755
+[0m13:23:58.534358 [debug] [Thread-2  ]: On model.billy_bulky.sales: Close
+[0m13:23:58.570633 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m13:23:58.577322 [debug] [Thread-10 ]: Timing info for model.billy_bulky.customers (execute): 13:23:55.162478 => 13:23:58.576933
+[0m13:23:58.578465 [debug] [Thread-10 ]: On model.billy_bulky.customers: Close
+[0m13:23:58.707231 [debug] [Thread-5  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13233c220>]}
+[0m13:23:58.710125 [info ] [Thread-5  ]: 6 of 7 OK created sql table model marts.products ............................... [[32mSUCCESS 1[0m in 3.58s]
+[0m13:23:58.711428 [debug] [Thread-5  ]: Finished running node model.billy_bulky.products
+[0m13:23:58.898222 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124b2c760>]}
+[0m13:23:58.901192 [info ] [Thread-2  ]: 7 of 7 OK created sql table model marts.sales .................................. [[32mSUCCESS 1[0m in 3.77s]
+[0m13:23:58.903169 [debug] [Thread-2  ]: Finished running node model.billy_bulky.sales
+[0m13:23:58.928991 [debug] [Thread-10 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '85957646-6f3f-4a66-aa83-8a9b45d5d2bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124b01ca0>]}
+[0m13:23:58.931175 [info ] [Thread-10 ]: 5 of 7 OK created sql table model marts.customers .............................. [[32mSUCCESS 1[0m in 3.80s]
+[0m13:23:58.932789 [debug] [Thread-10 ]: Finished running node model.billy_bulky.customers
+[0m13:23:58.936868 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:23:58.937713 [debug] [MainThread]: Connection 'model.billy_bulky.staging__shopify__products_history' was properly closed.
+[0m13:23:58.938364 [debug] [MainThread]: Connection 'model.billy_bulky.sales' was properly closed.
+[0m13:23:58.938980 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__orders' was properly closed.
+[0m13:23:58.939573 [debug] [MainThread]: Connection 'model.billy_bulky.staging_shopify__products' was properly closed.
+[0m13:23:58.940172 [debug] [MainThread]: Connection 'model.billy_bulky.int_customers_segmentation' was properly closed.
+[0m13:23:58.940759 [debug] [MainThread]: Connection 'model.billy_bulky.int_products_performance' was properly closed.
+[0m13:23:58.941357 [debug] [MainThread]: Connection 'model.billy_bulky.int_sales_trend' was properly closed.
+[0m13:23:58.941910 [debug] [MainThread]: Connection 'model.billy_bulky.customers' was properly closed.
+[0m13:23:58.942381 [debug] [MainThread]: Connection 'model.billy_bulky.products' was properly closed.
+[0m13:23:58.943123 [info ] [MainThread]: 
+[0m13:23:58.943811 [info ] [MainThread]: Finished running 4 view models, 3 table models in 0 hours 0 minutes and 10.36 seconds (10.36s).
+[0m13:23:58.947233 [debug] [MainThread]: Command end result
+[0m13:23:58.970097 [info ] [MainThread]: 
+[0m13:23:58.970702 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:23:58.971154 [info ] [MainThread]: 
+[0m13:23:58.971594 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m13:23:58.974906 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.313474, "process_user_time": 6.340578, "process_kernel_time": 0.416095, "process_mem_max_rss": "228245504", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:23:58.975483 [debug] [MainThread]: Command `dbt run` succeeded at 13:23:58.975350 after 12.31 seconds
+[0m13:23:58.975912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102b7deb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1249881f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123f25070>]}
+[0m13:23:58.976367 [debug] [MainThread]: Flushing usage events

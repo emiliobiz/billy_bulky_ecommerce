@@ -2,11 +2,11 @@
 
 ## Context
 
-In the competitive field of e-commerce, data-driven decision-making is key to understanding customer behavior, optimizing inventory, and tracking sales performance. The Billy Bulky project leverages a modern data stack to transform raw e-commerce data into actionable insights.
+In the competitive field of e-commerce, data-driven decision-making is key to understanding customer behavior, optimizing inventory, and tracking sales performance. The Billy Bulky project leverages a modern data stack to transform raw e-commerce data into actionable insights through a sophisticated dbt implementation.
 
 ## Objective
 
-The objective of this project is to demonstrate a robust data transformation layer using dbt (data build tool) to model e-commerce data for a fictional company, Billy Bulky. The aim is to showcase skills in data analysis, data modeling, and the utilization of dbt Core features within a data warehousing environment.
+The objective of this project is to demonstrate a robust data transformation layer using dbt (data build tool) to model e-commerce data for a fictional company, Billy Bulky. The aim is to showcase advanced skills in data analysis, data modeling, and expertise in the utilization of dbt Core features within a Snowflake data warehousing environment.
 
 ## Project Structure
 
@@ -18,16 +18,28 @@ The project is structured into three primary dbt modeling layers, each serving a
 
 ## Models and Metrics
 
-- **Customer Segmentation (`int_customer_segmentation`):** Metrics and purchase patterns provide insights into customer behavior.
-- **Product Performance (`int_product_performance`):** Aggregates product data to calculate sales performance, inventory turnover, and profitability.
+- **Customer Segmentation (`int_customers_segmentation`):** Metrics and purchase patterns provide insights into customer behavior.
+- **Product Performance (`int_products_performance`):** Aggregates product data to calculate sales performance, inventory turnover, and profitability.
 - **Sales Trends (`int_sales_trends`):** Analyzes sales data over time to discern trends and seasonal patterns.
-- **Sales Fact Table:** Centralizes sales data, linking customers and products to record transactional facts.
+- **Sales Table:** Centralizes sales data, linking customers and products to record transactional facts.
+- **Customers Table:** Centralizes customers data, based on the `int_customers_segmentation` intermediate model.
+- **Products Table:** Centralizes products data, based on the `int_products_performance` intermediate model.
+
+## dbt Features and Data Practices
+
+- **Seeds:** Added a static CSV seed file with employees references.
+- **Variables:** Employed to handle environment-specific configurations, enabling flexibility in deployment across different environments (e.g: `vip_spending_threshold`).
+- **Materializations:** Strategically used `ephemeral`, `table`, and `view` materializations to balance query performance and storage efficiency.
+- **Snapshots:** Captured historical changes to data, such as product prices, to track and analyze over time.
+- **Layering and Naming Conventions:** Adhered to industry-standard practices for clear organization and readability based on dbt best practices.
+- **Macros:** Generate schema name to overwrite the default dbt schema.
 
 ## Tools Leveraged
 
 - **Snowflake:** Efficient storage and compute power to query large volumes of e-commerce data.
 - **dbt Core:** Utilized for running transformations, testing data integrity, documenting the data models, and compiling the project.
 - **SQL:** The primary language for data modeling and transformation within dbt.
+- **Jinja & Python:** Languages used for macros and dbt-specific syntaxes.
 - **Git:** For version control and collaboration, ensuring best practices in code maintenance and deployment.
 
 ## Best Practices
@@ -36,7 +48,7 @@ Throughout the project, we have adhered to several best practices:
 
 - **DRY Principle:** Ensuring that our SQL code is not repetitive by using dbt's ref() function to reference models.
 - **Modular Design:** Each model is built to be independent, ensuring changes can be made with minimal impact on other models.
-- **Version Control:** All changes are tracked through git, with a clear commit history and branching strategy.
+- **Version Control:** All changes are tracked through git and pushed to a Github repository.
 - **Testing and Documentation:** Each model includes tests for data integrity and is well-documented for clarity and maintainability.
 
 ## Setup and Configuration
@@ -45,4 +57,5 @@ The project's setup involves configuration files such as `dbt_project.yml`, whic
 
 ## Conclusion
 
-This project represents a comprehensive approach to e-commerce data analysis, with a focus on scalability, maintainability, and the delivery of valuable business insights. It serves as a testament to the capabilities of dbt and modern data practices in the field of analytics.
+This project represents a comprehensive approach to e-commerce data analysis, with a focus on scalability, maintainability, and the delivery of valuable business insights. It serves as a testament to the capabilities of dbt and modern data practices in the field of analytics engineering.
+
