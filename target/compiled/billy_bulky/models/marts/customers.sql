@@ -93,10 +93,10 @@ SELECT
     , s.total_spent
     , s.recency
     , s.tenure
-    , CASE 
-        WHEN s.total_spent > 1000 THEN 'VIP' 
-        ELSE 'Regular' 
-      END AS customer_segment 
+    , CASE
+        WHEN total_spent > 1000 THEN 'VIP'
+        ELSE 'Regular'
+    END AS customer_segment
 FROM source s
 )
 
