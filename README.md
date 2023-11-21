@@ -63,3 +63,7 @@ The project's setup involves configuration files such as `dbt_project.yml`, whic
 
 This project represents a comprehensive approach to e-commerce data analysis, with a focus on scalability, maintainability, and the delivery of valuable business insights. It serves as a testament to the capabilities of dbt and modern data practices in the field of analytics engineering.
 
+## What's next? 
+
+**SOON** We will utilise Metabase as the visualisation tool to create reporting dashboards based on the models we created.
+
