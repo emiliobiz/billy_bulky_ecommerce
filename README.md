@@ -65,5 +65,16 @@ This project represents a comprehensive approach to e-commerce data analysis, wi
 
 ## What's next? 
 
-**SOON** We will utilise Metabase as the visualisation tool to create reporting dashboards based on the models we created.
+We can visualize our models using the open-source visualization tool Metabase. To open a Metabase instance, ensure that Docker is installed on your system and the Docker daemon is running. Then, execute the following commands in your terminal:
+
+- docker pull metabase/metabase:latest
+- docker run -d -p 3000:3000 --name metabase metabase/metabase
+
+After running these commands, open your web browser and navigate to http://localhost:3000 to access the Metabase setup wizard. Proceed to configure your instance by connecting it to Snowflake with the appropriate credentials. Once configured, you can start creating dashboards and visualizations for your useful metrics directly from the Snowflake data warehouse.
+
+**Two examples to Automate Billy Bulky's e-commerce reporting:**
+
+<img width="1416" alt="Screenshot 2023-11-21 at 14 35 02" src="https://github.com/emiliobiz/billy_bulky_ecommerce/assets/151553891/f97013aa-21e8-473a-b5f4-e9f9507a887a">
+
+<img width="1402" alt="Screenshot 2023-11-21 at 14 35 15" src="https://github.com/emiliobiz/billy_bulky_ecommerce/assets/151553891/64d786ca-67a9-4ffe-ac33-4aa2595f4637">
 
