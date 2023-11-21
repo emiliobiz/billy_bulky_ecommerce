@@ -4,7 +4,6 @@
   <img src="https://github.com/emiliobiz/billy_bulky_ecommerce/assets/151553891/1c62ea9f-ea39-468c-92e7-457d43869360" width="200" alt="billy_bulky"/>
 </p>
 
-
 ## Context
 
 In the competitive field of e-commerce, data-driven decision-making is key to understanding customer behavior, optimizing inventory, and tracking sales performance. The Billy Bulky project leverages a modern data stack to transform raw e-commerce data into actionable insights through a sophisticated dbt implementation.
@@ -12,6 +11,10 @@ In the competitive field of e-commerce, data-driven decision-making is key to un
 ## Data Generation
 
 Dummy data has been generated based on previous knowledge of Shopify's API to simulate a realistic e-commerce environment. We utilized the Python library Faker in combination with Numpy and Pandas to generate three core tables that represent customers, orders, and products. This synthetic dataset allows us to demonstrate the dbt project's capabilities without exposing sensitive real-world data.
+
+- [Customers](https://github.com/emiliobiz/billy_bulky_ecommerce/files/13427002/customers.csv)
+- [Orders](https://github.com/emiliobiz/billy_bulky_ecommerce/files/13427003/orders.csv)
+- [Products](https://github.com/emiliobiz/billy_bulky_ecommerce/files/13427004/products.csv)
 
 ## Objective
 
