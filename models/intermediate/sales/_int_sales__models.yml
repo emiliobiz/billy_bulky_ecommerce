@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_sales_trends
+  - name: int_sales_trend
     description: "This model captures the sales trends over different time periods, including daily, weekly, monthly, and yearly aggregates. It helps in understanding the temporal dynamics of sales such as seasonality, growth rates, and period comparisons."
 
     columns:

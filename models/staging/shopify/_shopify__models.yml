@@ -8,3 +8,9 @@ sources:
       - name: orders
       - name: customers
       - name: products 
+  
+  - name: shopify_snapshot 
+    database: E_COMMERCE
+    schema: SNAPSHOTS 
+    tables: 
+      - name: products_snapshot

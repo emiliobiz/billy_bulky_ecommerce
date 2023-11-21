@@ -1,34 +1,9 @@
-WITH  __dbt__cte__staging_shopify__orders as (
 WITH orders AS (
-    SELECT * FROM SHOPIFY.PUBLIC.orders
-)
-
-SELECT
-    ORDER_ID
-    , CUSTOMER_ID
-    , PRODUCT_ID
-    , QUANTITY
-    , ORDER_DATE
-    , STATUS
-FROM orders
-),  __dbt__cte__staging_shopify__products as (
-WITH products AS (
-    SELECT * FROM SHOPIFY.PUBLIC.products
-)
-
-SELECT
-    PRODUCT_ID
-    , NAME
-    , CATEGORY
-    , PRICE
-    , STOCK_LEVEL
-FROM products
-), orders AS (
-    SELECT * FROM __dbt__cte__staging_shopify__orders
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__orders
 )
 
 , products AS (
-    SELECT * FROM __dbt__cte__staging_shopify__products
+    SELECT * FROM E_COMMERCE.staging.staging_shopify__products
 )
 
 , product_sales AS (

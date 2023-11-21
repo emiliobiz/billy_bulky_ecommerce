@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_product_performance
+  - name: int_products_performance
     description: "This model aggregates product performance metrics from order and product data, providing insights into sales volume, revenue, average pricing, and stock turnover rates."
 
     columns:

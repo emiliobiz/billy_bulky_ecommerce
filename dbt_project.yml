@@ -18,10 +18,10 @@ clean-targets:
 models:
   billy_bulky:
     staging:
-      +materialized: ephemeral
+      +materialized: view
       +schema: staging
     intermediate:
-      +materialized: table
+      +materialized: ephemeral
       +schema: intermediate
     marts:
       +materialized: table

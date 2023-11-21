@@ -1,32 +1,16 @@
-WITH orders AS (
-    SELECT * FROM {{ ref('staging_shopify__orders') }}
-)
-
-, products AS (
-    SELECT * FROM {{ ref('staging_shopify__products') }}
-)
-
-
-, product_sales AS (
+WITH final AS (
     SELECT
-        o.PRODUCT_ID
-        , SUM(o.QUANTITY) AS total_units_sold
-        , SUM(o.QUANTITY * p.PRICE) AS total_sales_value
-    FROM orders o
-    JOIN products p ON o.PRODUCT_ID = p.PRODUCT_ID
-    WHERE o.STATUS NOT IN ('cancelled')
-    GROUP BY o.PRODUCT_ID
+        pp.PRODUCT_ID
+        , pp.NAME
+        , pp.CATEGORY
+        , pp.PRICE
+        , pp.average_sale_price
+        , pp.total_sales
+        , pp.total_units_sold
+        , pp.total_sales_value
+        , pp.turnover_rate
+        , pp.STOCK_LEVEL
+    FROM {{ ref('int_products_performance') }} pp
 )
-
-, final AS (
-    SELECT
-    p.PRODUCT_ID
-    , p.NAME
-    , p.CATEGORY
-    , p.PRICE
-    , COALESCE(ps.total_units_sold, 0) AS total_units_sold
-    , COALESCE(ps.total_sales_value, 0) AS total_sales_value
-FROM products p
-LEFT JOIN product_sales ps ON p.PRODUCT_ID = ps.PRODUCT_ID)
 
 SELECT * FROM final
