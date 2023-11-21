@@ -4,6 +4,10 @@
 
 In the competitive field of e-commerce, data-driven decision-making is key to understanding customer behavior, optimizing inventory, and tracking sales performance. The Billy Bulky project leverages a modern data stack to transform raw e-commerce data into actionable insights through a sophisticated dbt implementation.
 
+## Data Generation
+
+Dummy data has been generated based on previous knowledge of Shopify's API to simulate a realistic e-commerce environment. We utilized the Python library Faker in combination with Numpy and Pandas to generate three core tables that represent customers, orders, and products. This synthetic dataset allows us to demonstrate the dbt project's capabilities without exposing sensitive real-world data.
+
 ## Objective
 
 The objective of this project is to demonstrate a robust data transformation layer using dbt (data build tool) to model e-commerce data for a fictional company, Billy Bulky. The aim is to showcase advanced skills in data analysis, data modeling, and expertise in the utilization of dbt Core features within a Snowflake data warehousing environment.
