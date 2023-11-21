@@ -1,5 +1,10 @@
 # Billy Bulky E-Commerce Data Project
 
+<p align="center">
+  <img src="https://github.com/emiliobiz/billy_bulky_ecommerce/assets/151553891/1c62ea9f-ea39-468c-92e7-457d43869360" width="200" alt="billy_bulky"/>
+</p>
+
+
 ## Context
 
 In the competitive field of e-commerce, data-driven decision-making is key to understanding customer behavior, optimizing inventory, and tracking sales performance. The Billy Bulky project leverages a modern data stack to transform raw e-commerce data into actionable insights through a sophisticated dbt implementation.
@@ -63,7 +68,7 @@ The project's setup involves configuration files such as `dbt_project.yml`, whic
 
 This project represents a comprehensive approach to e-commerce data analysis, with a focus on scalability, maintainability, and the delivery of valuable business insights. It serves as a testament to the capabilities of dbt and modern data practices in the field of analytics engineering.
 
-## What's next? 
+## Metabase
 
 We can visualize our models using the open-source visualization tool Metabase. To open a Metabase instance, ensure that Docker is installed on your system and the Docker daemon is running. Then, execute the following commands in your terminal:
 
